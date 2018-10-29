@@ -5,7 +5,8 @@ import { routerMiddleware, connectRouter } from 'connected-react-router/immutabl
 import { createEpicMiddleware } from 'redux-observable';
 import { createLogger } from 'redux-logger';
 import Immutable from 'immutable';
-import rootReducer , {cb}from './reducers'
+import epics from './root_epics';
+import reducer from './root_reducer';
 
 export const history = createBrowserHistory();
 
@@ -21,9 +22,9 @@ const middlewares = composeEnhancers(
 );
 
 const store = createStore(
-  connectRouter(history)(rootReducer),
+  connectRouter(history)(reducer),
   initialState,
   middlewares,
 )
-epicMiddleware.run(cb);
+epicMiddleware.run(epics);
 export default store;
