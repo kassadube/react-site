@@ -1,30 +1,45 @@
-/* eslint-disable import/default */
 
+import * as serviceWorker from './serviceWorker';
+
+//import { AppContainer } from 'react-hot-loader'
+import {  connectRouter } from 'connected-react-router/immutable'
+import { Provider } from 'react-redux';
 import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import configureStore, { history } from './store/configureStore';
-import Root from './components/Root';
-import './styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
-require('./favicon.ico'); // Tell webpack to load favicon.ico
+import ReactDOM from 'react-dom';
+import App from './App';
+import rootReducer from './reducers';
+import store, {history} from './store';
 
-const store = configureStore();
 
-render(
-  <AppContainer>
-    <Root store={store} history={history} />
-  </AppContainer>,
-  document.getElementById('app')
-);
-
-if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    const NewRoot = require('./components/Root').default;
-    render(
-      <AppContainer>
-        <NewRoot store={store} history={history} />
-      </AppContainer>,
-      document.getElementById('app')
-    );
-  });
+const render = () => {
+  ReactDOM.render(
+    <div>
+      <Provider store={store}>
+        <App history={history} />
+      </Provider>
+     </div>
+   ,
+    document.getElementById('root')
+  )
 }
+
+render()
+
+// Hot reloading
+if (module.hot) {
+  // Reload components
+  module.hot.accept('./App', () => {
+    render()
+  })
+
+  // Reload reducers
+  module.hot.accept('./reducers', () => {
+    store.replaceReducer(connectRouter(history)(rootReducer))
+  })
+}
+
+window.store = store;
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
