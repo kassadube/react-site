@@ -1,5 +1,5 @@
 
-##Start
+# Start
 
 yarn add react react-dom redux react-router history react-redux react-router-dom connected-react-router
 
@@ -8,6 +8,6 @@ yarn add react react-dom redux react-router history react-redux react-router-dom
 yarn add redux-thunk rxjs redux-observable redux-logger 
 yarn add react react-dom redux react-router history react-redux react-router-dom connected-react-router
 
-##IMMUTABLE
+## IMMUTABLE
 
 yarn add immutable redux-immutable
