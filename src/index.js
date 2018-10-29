@@ -10,7 +10,7 @@ import App from './App';
 import rootReducer from './reducers';
 import store, {history} from './store';
 
-
+import './skeleton.css';
 const render = () => {
   ReactDOM.render(
     <div>
