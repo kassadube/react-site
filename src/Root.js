@@ -1,11 +1,7 @@
 
-import * as serviceWorker from './serviceWorker';
-
 //import { AppContainer } from 'react-hot-loader'
-import {  connectRouter } from 'connected-react-router/immutable'
 import { Provider } from 'react-redux';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
 import store, {history} from './store/store';
 
