@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { increment, decrement, ping } from '../../actions';
+import { pingSelector, countSelector } from '../../selectors';
 
 const Pingpong = (props) => (
   <div>
@@ -21,8 +22,8 @@ Pingpong.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  count: state.getIn(['counter','val']),
-  isPinging: state.getIn(['counter','isPinging']),
+  count: countSelector(state),
+  isPinging: pingSelector(state),
 })
 
 const mapDispatchToProps = dispatch => ({
