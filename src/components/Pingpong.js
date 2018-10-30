@@ -21,8 +21,8 @@ Pingpong.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  count: state.getIn(['count','val']),
-  isPinging: state.getIn(['count','isPinging']),
+  count: state.getIn(['counter','val']),
+  isPinging: state.getIn(['counter','isPinging']),
 })
 
 const mapDispatchToProps = dispatch => ({

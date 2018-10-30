@@ -18,7 +18,7 @@ Main.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  count: state.getIn(['count','val']),
+  count: state.getIn(['counter','val']),
 })
 
 
