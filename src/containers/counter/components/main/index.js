@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { increment, decrement } from '../../../../actions/counter'
+import { increment, decrement } from '../../../../actions/counter';
 
 const Main = (props) => (
   <div>

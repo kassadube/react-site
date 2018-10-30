@@ -3,11 +3,11 @@ import { Route, Switch } from 'react-router'
 import Home from '../components/Home'
 import Hello from '../components/Hello'
 import Counter from '../containers/counter';
-import Pingpong from '../components/Pingpong'
 import NoMatch from '../components/NoMatch'
 import NavBar from '../components/NavBar'
 
 const Main = Counter.components.Main;
+const Pingpong = Counter.components.Pingpong;
 const routes = (
   <div>
     <NavBar />

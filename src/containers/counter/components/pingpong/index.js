@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { increment, decrement, ping } from '../actions/counter'
+import { increment, decrement, ping } from '../../../../actions/counter';
 
 const Pingpong = (props) => (
   <div>

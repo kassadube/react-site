@@ -1,3 +1,4 @@
 import Main from './main';
+import Pingpong from './pingpong';
 
-export default { Main };
+export default { Main, Pingpong};
