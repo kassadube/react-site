@@ -5,8 +5,10 @@ import { Hello} from '../components/Hello'
 import Counter from '../containers/counter';
 import NoMatch from '../components/NoMatch'
 import NavBar from '../components/NavBar'
+import Hooks from '../containers/hooks';
 
-const Main = Counter.components.Main;
+const Cntr = Counter.components.Main;
+const Hook = Hooks.components.Main;
 const Pingpong = Counter.components.Pingpong;
 const routes = (
   <div>
@@ -14,7 +16,8 @@ const routes = (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/hello" component={Hello} />
-      <Route path="/counter" component={Main} />
+      <Route path="/counter" component={Cntr} />
+      <Route path="/hook" component={Hook} />
       <Route path="/pingpong" component={Pingpong} />
       <Route component={NoMatch} />
     </Switch>

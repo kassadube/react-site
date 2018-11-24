@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.1.1"
   },
   "dependencies": {
     "connected-react-router": "^4.5.0",
@@ -13,8 +13,8 @@
     "immutable": "^3.8.2",
     "jest-dom": "^2.1.1",
     "jest-enzyme": "^7.0.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "16.7.0-alpha.0",
     "react-redux": "^5.1.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
