@@ -2,8 +2,8 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
-import routes from '../routes';
+import { withRouter } from 'react-router-dom';
+import Routes from '../routes';
 
 class AppLayout extends React.Component {
 
@@ -14,7 +14,7 @@ class AppLayout extends React.Component {
     render()
     {
         return (
-            <routes />
+            <Routes />
         );
     }
 }
@@ -27,4 +27,4 @@ const mapStateToProps = state => ({
     
   )
   
-  export default connect(mapStateToProps, mapDispatchToProps)(AppLayout);
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppLayout));

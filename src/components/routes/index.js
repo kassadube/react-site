@@ -12,7 +12,8 @@ const Cntr = Counter.components.Main;
 const Hook = Hooks.components.Main;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
-const routes = () =>{
+const Routes = () =>{
+  console.log('d');
   return (
   <div>
     <NavBar />
@@ -29,4 +30,4 @@ const routes = () =>{
 )
   }
 
-export default routes
+export default Routes
