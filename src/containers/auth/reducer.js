@@ -13,6 +13,7 @@ const reducer = (state = initialState, action) => {
         return state.set('loged', state.get('loged') + 1)
                   .set('token', action.payload.token);
     case types.AUTH_USER_ERROR:
+      debugger;
         return state.set('loged', state.get('loged') + 1)
                   .set('username', action.payload.username)
                   .set('password', action.payload.password);

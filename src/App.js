@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { ConnectedRouter } from 'connected-react-router/immutable'
-import routes from './routes'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ConnectedRouter } from 'connected-react-router/immutable';
+import AppLayout from './components/AppLayout';
 
 const App = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
-      { routes }
+      <AppLayout />
     </ConnectedRouter>
   )
 }

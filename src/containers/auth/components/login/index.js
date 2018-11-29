@@ -1,9 +1,13 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+
 import { authUser,authUser_ACTION } from '../../actions';
 import { authSelector } from '../../selectors';
 import config from '../../../../config';
+import SigninUI from '../../../../components/SigninUI';
+
+
 
 class Login extends React.Component {
     constructor (props) {
@@ -28,7 +32,7 @@ class Login extends React.Component {
 
     render(){
       return(
-        <div>
+        <div  className="login-section">
           --{config.URL.SIGNIN}--
             --{this.props.loged.username}--
          <form onSubmit={this.handleSubmit}>
@@ -44,6 +48,7 @@ class Login extends React.Component {
                 <button> send </button>
             </div>
          </form>
+         <SigninUI />
        </div>);
   }
 

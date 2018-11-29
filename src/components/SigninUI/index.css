@@ -1,0 +1,64 @@
+.login-section {
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(89, 182, 213, 0.67) 80%, #0892c0 100%), url('./road-sky-clouds-cloudy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-section .login-section-form {
+    height: 100vh;
+    max-width: 420px;
+    color: white;
+    background: linear-gradient(0deg, #224877cb 0%, #11243b 100%);
+    background: -webkit-linear-gradient(90deg, #224877 0%, #11243b 100%);
+    background: -moz-linear-gradient(90deg, #224877 0%, #11243b 100%);
+    background: -o-linear-gradient(90deg, #224877 0%, #11243b 100%);
+    background: -ms-linear-gradient(90deg, #224877 0%, #11243b 100%);
+    border-radius: 1px;
+    padding: 20px 40px;
+}
+
+.login-section .login-section-form .login-button {
+    width: 95%;
+    color: #132e4a;
+    font-weight: 400;
+    background-color: #4bdcf2;
+    border-radius: 13px;
+    padding: 4px 25px;
+    border: none;
+    transition: background-color .2s;
+}
+
+.login-section .login-section-form .login-button:hover {
+    background-color: #66ebff;
+    transition: background-color .2s;
+}
+
+img[alt="Pointer Logo"] {
+    margin: 0 0 15px 0;
+}
+
+.login-section a.forget-password {
+    color: #4bdcf2;
+}
+
+.login-input-text {
+    color: #a5aaac;
+    white-space: nowrap;
+    padding: 5px 0;
+}
+
+.login-input {
+    width: 100%;
+    color: black;
+}
+
+.login-input-text input {
+    margin: 0 0 1em 0;
+}
+
+.login-input-text p {
+    color: #c9ced0;
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
