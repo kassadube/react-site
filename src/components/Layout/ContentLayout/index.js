@@ -8,6 +8,7 @@ const ContentLayout = (props) =>{
         <div>
             <Header /> 
             <Routes />
+            
         </div>
     )
 

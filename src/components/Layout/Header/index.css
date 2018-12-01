@@ -1,0 +1,14 @@
+header.app-header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 15px;
+    /* Approximation due to font substitution */
+    font-weight: 100;
+    line-height: 42px;
+    /* Approximation due to font substitution */
+    text-align: left;
+    justify-content: space-between; }
