@@ -1,6 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { authUser,authUser_ACTION } from '../../actions';
 import { authSelector } from '../../selectors';
@@ -39,7 +40,7 @@ class Login extends React.Component {
             
             <div  className="login-section-form four columns offset-by-one">
            
-                <div class="row">
+                <div className="row">
                   <img alt="Pointer Logo" src={imagesBank.POINTER_LOGO} />
                   </div>
                   <h5>Pointer Connect</h5>
@@ -59,7 +60,9 @@ class Login extends React.Component {
               </div>
           </form>
           --{config.URL.SIGNIN}--
+          <Link to="/">Home</Link>
           </div>
+           
           </div>
           
          <SigninUI />

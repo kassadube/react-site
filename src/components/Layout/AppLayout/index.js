@@ -3,14 +3,15 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Routes from '../routes';
+import ContentLayout from '../ContentLayout';
+import LoginLayout from '../LoginLayout';
 
 class AppLayout extends React.Component {
 
     constructor(props)
     {
         super(props);
-        this.state = {};
+        this.state = {pathname:props.history.location.pathname};
         this.history = props.history;        
     }
     static getDerivedStateFromProps(props, state)
@@ -26,12 +27,22 @@ class AppLayout extends React.Component {
     }
     render()
     {
-        
-        
+        let {history} = this.props;
+        if(history.location.pathname == '/login')
+        {    
+             return(
+                <LoginLayout />
+             );
+             
+        }
+        else
+        return (
+            <ContentLayout />
+        );
 
-        return ( 
-            <Routes pathname={this.history.location.pathname}  />
-            );
+      //  return ( 
+       //     <Routes pathname={this.history.location.pathname}  />
+      //      );
     }
 }
 
