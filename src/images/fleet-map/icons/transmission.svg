@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="26px" height="26px" viewBox="0 0 26 26">
+<filter filterUnits="objectBoundingBox" x="-27.78" y="-27.78" width="155.56" height="166.67" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="2.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.26" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="3.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+</filter>
+<circle cx="13.00" cy="10.00" r="9.00" fill="rgb(255,255,255)" filter="url(#filter0)"/><path fillRule="evenodd" d="M 15.72 10.7C 15.72 10.7 12.7 13.7 12.7 13.7 12.31 14.09 11.68 14.09 11.3 13.7 10.91 13.3 10.91 12.67 11.3 12.28 11.3 12.28 13.61 9.99 13.61 9.99 13.61 9.99 11.3 7.69 11.3 7.69 10.91 7.3 10.91 6.67 11.3 6.28 11.68 5.89 12.31 5.89 12.7 6.28 12.7 6.28 15.72 9.27 15.72 9.27 15.92 9.47 16.01 9.73 16.01 9.99 16.01 10.25 15.92 10.51 15.72 10.7Z" fill="rgb(19,45,73)"/></svg>

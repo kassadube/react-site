@@ -5,8 +5,7 @@ import './index.css';
 const SignInUI = () => {
   const [count, setCount] = useState(0);
   return (
-    <div>
-    
+    <div class='container'>    
             <div>
             <p>You clicked {count} times</p>
             <button onClick={() => setCount(count + 1)}>

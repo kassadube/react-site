@@ -10,12 +10,28 @@ class AppLayout extends React.Component {
     constructor(props)
     {
         super(props);
+        this.state = {};
+        this.history = props.history;        
+    }
+    static getDerivedStateFromProps(props, state)
+    {
+        let {history} = props;
+        
+        if(history.location.pathname == '/pingpong')
+        {    
+             history.push("/login");
+             
+        }
+        return state;
     }
     render()
     {
-        return (
-            <Routes />
-        );
+        
+        
+
+        return ( 
+            <Routes pathname={this.history.location.pathname}  />
+            );
     }
 }
 

@@ -14,7 +14,7 @@ export const authUser = (login) => ({
 
     axios.post(config.URL.SIGNIN, { username, password, langId: language })
       .then((response )=> {
-        dispatch({ type: types.AUTH_USER_SUCCESS, payload: { token: response.data.token } });
+        dispatch({ type: types.AUTH_USER_SUCCESS, payload: { data: response.data } });
       })
       .catch((error) => {
         dispatch({

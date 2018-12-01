@@ -7,3 +7,5 @@ export const authSelector = state =>{ return (
         password: state.getIn(['auth','password'])
     })
 }
+
+export const tokenSelector = state =>{ return localStorage.get('token');}

@@ -12,11 +12,12 @@ const Cntr = Counter.components.Main;
 const Hook = Hooks.components.Main;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
-const Routes = () =>{
-  console.log('d');
+
+const Routes = (props) =>{
+  let {pathname} = props;
   return (
-  <div>
-    <NavBar />
+  <div>{pathname != '/login' ? <NavBar /> : <div></div> }
+    
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/hello" component={Hello} />

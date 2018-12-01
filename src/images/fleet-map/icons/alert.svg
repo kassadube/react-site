@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="26px" height="26px" viewBox="0 0 26 26">
+<filter filterUnits="objectBoundingBox" x="-27.78" y="-27.78" width="155.56" height="166.67" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="2.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.26" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="3.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+</filter>
+<circle cx="13.00" cy="10.00" r="9.00" fill="rgb(255,255,255)" filter="url(#filter0)"/><path fillRule="evenodd" d="M 13.89 5C 13.89 5 9 15 9 15 9 15 18 15 18 15 18 15 13.89 5 13.89 5ZM 14 14C 14 14 13 14 13 14 13 14 13 13 13 13 13 13 14 13 14 13 14 13 14 14 14 14ZM 13 12C 13 12 13 9 13 9 13 9 14 9 14 9 14 9 14 12 14 12 14 12 13 12 13 12Z" fill="rgb(17,39,69)"/></svg>

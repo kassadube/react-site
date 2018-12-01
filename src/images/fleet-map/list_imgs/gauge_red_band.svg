@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="106px" height="82px" viewBox="0 0 106 82">
+<linearGradient id="linear_PSgrad_0" x1="0%" y1="50%" x2="100%" y2="50%">
+    <stop offset="0%" stop-color="rgb(255,243,243)" stop-opacity="1" />
+    <stop offset="100%" stop-color="rgb(239,69,129)" stop-opacity="1" />
+</linearGradient>
+
+<path fillRule="evenodd" d="M 12.92 75.41C 13.89 77.08 13.32 79.23 11.65 80.2 9.98 81.17 7.84 80.6 6.87 78.93 2.37 71.18-0.21 62.18-0.21 52.57-0.21 23.54 23.34-0 52.39-0 65.54-0 77.56 4.82 86.79 12.79 97.94 22.43 116 49.67 97 80 95.97 81.64 93.81 82.13 92.18 81.11 90.54 80.08 90.04 77.92 91.07 76.28 107.32 50.34 92.38 26.87 82.21 18.09 73.94 10.94 63.35 7 52.39 7 27.25 7 6.79 27.44 6.79 52.57 6.79 60.61 8.91 68.51 12.92 75.41" fill="url(#linear_PSgrad_0)"/></svg>

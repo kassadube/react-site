@@ -10,10 +10,11 @@ const reducer = (state = initialState, action) => {
                   .set('username', action.payload.username)
                   .set('password', action.payload.password);
     case types.AUTH_USER_SUCCESS:
-        return state.set('loged', state.get('loged') + 1)
-                  .set('token', action.payload.token);
+          localStorage.setItem('token', action.payload.data.token);
+          localStorage.setItem('token-expiration', action.payload.data.expire);
+          return state.set('loged', state.get('loged') + 1)
+                  .set('token', action.payload.data.token);
     case types.AUTH_USER_ERROR:
-      debugger;
         return state.set('loged', state.get('loged') + 1)
                   .set('username', action.payload.username)
                   .set('password', action.payload.password);
