@@ -1,0 +1,52 @@
+<svg id="driving_moving" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #132e4a;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="27" height="27" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.26"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle id="Ellipse_14_copy" data-name="Ellipse 14 copy" class="cls-1" cx="13" cy="10" r="9"/>
+  <path id="idilimg_copy_4" data-name="idilimg copy 4" class="cls-2" d="M191.983,153.008a0.962,0.962,0,1,1-1.009.961A0.986,0.986,0,0,1,191.983,153.008Zm2.243,2.848a2.531,2.531,0,0,0,0-3.726,0.893,0.893,0,0,1,0-1.307,1.025,1.025,0,0,1,1.383,0,4.269,4.269,0,0,1,0,6.277,1.025,1.025,0,0,1-1.383,0A0.822,0.822,0,0,1,194.226,155.856Zm-4.483,0a2.531,2.531,0,0,1,0-3.726,0.893,0.893,0,0,0,0-1.307,1.025,1.025,0,0,0-1.383,0,4.269,4.269,0,0,0,0,6.277,1.025,1.025,0,0,0,1.383,0A0.822,0.822,0,0,0,189.743,155.856Z" transform="translate(-179 -144)"/>
+</svg>

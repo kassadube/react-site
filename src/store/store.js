@@ -4,6 +4,7 @@ import { createBrowserHistory } from 'history'
 import { routerMiddleware, connectRouter } from 'connected-react-router/immutable';
 import { createEpicMiddleware } from 'redux-observable';
 import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 import Immutable from 'immutable';
 import epics from './root_epics';
 import reducer from './root_reducer';
@@ -17,6 +18,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const middlewares = composeEnhancers(
  // applyMiddleware(createLogger()),
+  applyMiddleware(thunk),
   applyMiddleware(routerMiddleware(history)),
   applyMiddleware(epicMiddleware),
 );

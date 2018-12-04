@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="20px" height="20px" viewBox="0 0 20 20">
+<filter filterUnits="objectBoundingBox" x="-18.75" y="-18.75" width="137.50" height="143.75" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="1.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.26" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="2.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+</filter>
+<circle cx="10.00" cy="8.00" r="8.00" fill="rgb(255,255,255)" filter="url(#filter0)"/><path fillRule="evenodd" d="M 13.97 8.52C 12.96 9.77 11.27 10.12 9.86 9.51 9.86 9.51 6.86 13.22 6.86 13.22 6.86 13.22 5.24 11.91 5.24 11.91 5.24 11.91 8.27 8.17 8.27 8.17 8.23 8.12 8.18 8.07 8.14 8.01 7.66 7.19 7.55 6.18 7.85 5.28 8.49 3.38 10.28 2.52 11.92 2.85 11.92 2.85 10.11 5.08 10.11 5.08 10.11 5.08 10.27 7.33 10.27 7.33 10.27 7.33 12.66 7.15 12.66 7.15 12.66 7.15 14.47 4.91 14.47 4.91 14.97 6.08 14.82 7.47 13.97 8.52Z" fill="rgb(13,37,63)"/></svg>

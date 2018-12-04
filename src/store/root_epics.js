@@ -1,5 +1,6 @@
 import { combineEpics } from 'redux-observable';
-import epics from '../containers/counter/epics';
+import counterEpics from '../containers/counter/epics';
+import authEpics from '../containers/auth/epics';
 
 
-export default combineEpics(...epics);
+export default combineEpics(...counterEpics,...authEpics);

@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 1366px;
+  margin: 0%;
+  padding: 0%;
+  background: -webkit-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
+  background: -moz-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
+  background: -o-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
+  background: -ms-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
+  background: linear-gradient(165deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
+  overflow-y: hidden; }
+
+  div#root, div.context-provider, div.app-layout.container-fluid {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0rem;
+    }

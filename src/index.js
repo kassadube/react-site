@@ -4,6 +4,7 @@ import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 
 import './skeleton.css';
+import './index.css';
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 
