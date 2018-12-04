@@ -62,10 +62,10 @@ class Login extends React.Component {
           --{config.URL.SIGNIN}--
           <Link to="/">Home</Link>
           </div>
-           
+          <SigninUI />
           </div>
           
-         <SigninUI />
+         
        </div>);
   }
 
