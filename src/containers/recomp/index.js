@@ -1,4 +1,5 @@
 import  components  from './components';
+import  Page  from './page';
 
 
-export default {  components};
+export default {  components, Page};
