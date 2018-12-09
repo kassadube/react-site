@@ -21,13 +21,15 @@
     "react-router-dom": "^4.3.1",
     "react-test-renderer": "^16.6.1",
     "react-testing-library": "^5.2.3",
+    "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-immutable": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-observable": "^1.0.0",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "styled-components": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

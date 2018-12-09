@@ -11,6 +11,7 @@ import Auth from '../../../containers/auth';
 
 const Cntr = Counter.components.Main;
 const Hook = Hooks.components.Main;
+const Slider = Hooks.components.Slider;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
 
@@ -21,7 +22,8 @@ const Routes = ()=>{
       <Route exact path="/" component={Home} />
       <Route path="/hello" component={Hello} />
       <Route path="/counter" component={Cntr} />
-      <Route path="/hook" component={Hook} />
+      <Route exact path="/hook" component={Hook} />
+      <Route path="/hook/slider" component={Slider} />     
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
       <Route component={NoMatch} />
