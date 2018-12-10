@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const Main = () => {
   const [count, setCount] = useState(0);
   return (
-    <div>
+    <div className="PD10">
       <div>
       <Link to="/hook/slider">Slider</Link>
       </div>
