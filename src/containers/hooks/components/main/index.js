@@ -1,7 +1,7 @@
 
 import React, {useState } from 'react'
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 
 const Main = () => {
   const [count, setCount] = useState(0);
