@@ -1,6 +1,6 @@
 
-import React from 'react'
-import { Route, Switch } from 'react-router'
+import React from 'react';
+import { Route, Switch } from 'react-router';
 
 import Home from '../../Home'
 import { Hello} from '../../Hello'
@@ -20,7 +20,7 @@ const Login = Auth.components.Login;
 const Routes = ()=>{
 
     return (
-        <Switch>
+    <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/hello" component={Hello} />
       <Route path="/counter" component={Cntr} />
@@ -29,6 +29,10 @@ const Routes = ()=>{
       <Route exact path="/recomp" component={Recomp.Page.CardShow} />   
       <Route exact path="/recomp/plain" component={Recomp.Page.Plain} />  
       <Route exact path="/recomp/resite" component={Recomp.Page.Resite} /> 
+      <Route exact path="/recomp/toggle" component={Recomp.Page.ToggleApp} /> 
+      <Route exact path="/recomp/reducer" component={Recomp.Page.ReducerApp} /> 
+      <Route exact path="/recomp/siterec" component={Recomp.Page.SiteRec} /> 
+      <Route exact path="/recomp/ConnectedApp" component={Recomp.Page.ConnectedApp} /> 
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
       <Route component={NoMatch} />
