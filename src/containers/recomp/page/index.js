@@ -4,6 +4,7 @@ import Resite from './resite';
 import ToggleApp from './toggle';
 import ReducerApp from './reducerApp';
 import SiteRec from './siteRec';
-import ConnectedApp from './connectedRedux';
+//import ConnectedApp from './connectedRedux';
+const ConnectedApp = SiteRec;
 
 export default {CardShow, Plain, Resite, ToggleApp, ReducerApp, SiteRec, ConnectedApp};

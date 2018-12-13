@@ -1,54 +1,33 @@
 import React from 'react';
-import { compose, withState, withHandlers }  from 'recompose';
-
+import { compose, setDisplayName }  from 'recompose';
+import { connect } from 'react-redux';
+import { increment, decrement } from '../../../counter/actions';
 import Header from '../../components/header';
 
-const withToggle = compose(
-    withState('toggledOn', 'toggle', false),
-    withHandlers({
-      show: ({ toggle }) => (e) => toggle(true),
-      hide: ({ toggle }) => (e) => toggle(false),
-      toggle: ({ toggle }) => (e) => toggle((current) => !current)
-    })
-  )
+
+const mapStateToProps = state => ({
+  count: state.getIn(['counter','val']),
+})
 
 
-  const StatusList = () =>
-  <div className="StatusList">
-    <div>pending</div>
-    <div>inactive</div>
-    <div>active</div>
-  </div>;
+const mapDispatchToProps = dispatch => ({
+  increment: () => dispatch(increment()),
+  decrement: () => dispatch(decrement()),
+})
 
-  const Status = withToggle(({ status, toggledOn, toggle }) =>
-  <span onClick={ toggle }>
-    { status }
-    { toggledOn && <StatusList /> }
-  </span>
-);
-
-const Tooltip = withToggle(({ text, children, toggledOn, show, hide }) =>
-  <span>
-    { toggledOn && <div className="Tooltip">{ text }</div> }
-    <span onMouseEnter={ show } onMouseLeave={ hide }>{ children }</span>
-  </span>
-);
-
-const User = ({ name, status }) =>
-  <div className="User">
-    <Tooltip text="Cool Dude!">{ name }</Tooltip>—
-    <Status status={ status } />
-  </div>;
-
-const ConnectedApp = () =>
+const _ConnectedApp = (props) =>
     <div className="PD10">        
         <div className="app-container">
             <Header headerName="Plain"/>
             <div>
-                <User name="Tim" status="active" />
+                <button title="sddd" >text --{props.count}--</button>
             </div>
         </div>
     </div>;
 
-
+const enhace = compose(
+  setDisplayName('counter'),
+  connect(mapStateToProps)
+);
+const ConnectedApp = enhace(_ConnectedApp);
   export default ConnectedApp;
