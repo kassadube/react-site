@@ -35,6 +35,9 @@ const Header = ({headerName, showMenu = true}) => {
                         <li>
                             <Link to="/recomp/ConnectedApp">Connected App</Link> 
                         </li>
+                        <li>
+                            <Link to="/recomp/Rxjspg">Rxjs App</Link> 
+                        </li>
                     </ul>):(<div></div>)
                 }
             </div>
