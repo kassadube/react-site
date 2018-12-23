@@ -15,6 +15,7 @@ const componentFromStream = componentFromStreamWithConfig({
 
 
 const createTypewriter = (message, speed, pause) =>
+
   zip(
     from(message),
     interval(speed),
@@ -29,11 +30,10 @@ const createTypewriter = (message, speed, pause) =>
 
 const StreamingApp = componentFromStream(props$ =>
   props$.pipe(
-    tap(props=> console.log(props)),
+    tap(props=> console.log("StreamingApp ",props)),
     switchMap(props =>
       createTypewriter(props.message, props.speed, props.pause)
-    ),
-    distinctUntilChanged(),
+    ),    
     map(message => ({ message })),
     tap(m=>console.log(m)),
     map(ShowMessage)
