@@ -24,7 +24,7 @@ const middlewares = composeEnhancers(
 );
 
 const store = createStore(
-  connectRouter(history)(reducer),
+  reducer(history),
   initialState,
   middlewares,
 )
