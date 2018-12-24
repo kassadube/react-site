@@ -1,6 +1,6 @@
-import React, {useState, Component, ReactDom } from 'react';
+/* eslint-disable no-unused-vars */
+import React, {useState, Component } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types'
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
 //const { Component, ReactDOM } = React;

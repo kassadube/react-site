@@ -1,8 +1,9 @@
 
 import { applyMiddleware, compose, createStore } from 'redux'
 import { createBrowserHistory } from 'history'
-import { routerMiddleware, connectRouter } from 'connected-react-router/immutable';
+import { routerMiddleware } from 'connected-react-router/immutable';
 import { createEpicMiddleware } from 'redux-observable';
+// eslint-disable-next-line no-unused-vars
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import Immutable from 'immutable';
@@ -17,7 +18,7 @@ const initialState = Immutable.Map();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const middlewares = composeEnhancers(
- // applyMiddleware(createLogger()),
+  //applyMiddleware(createLogger()),
   applyMiddleware(thunk),
   applyMiddleware(routerMiddleware(history)),
   applyMiddleware(epicMiddleware),

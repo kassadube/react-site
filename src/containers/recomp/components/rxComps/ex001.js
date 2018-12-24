@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { render } from "react-dom"
+import React from 'react';
 import {  interval, from } from "rxjs"
-import { map, tap , startWith, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import { map,  startWith, distinctUntilChanged, switchMap} from 'rxjs/operators';
 //import config from "recompose/rxjsObservableConfig"
 import {  
   componentFromStreamWithConfig
@@ -29,7 +28,6 @@ const Ex001 = componentFromStream(props$ => {
   
   return timstamp$.pipe(
    startWith(null),
-   // tap(i=> console.log(i)),
     map(i => (
     <TimeShow time={new Date()}/>
   )))

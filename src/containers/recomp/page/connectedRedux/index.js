@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { compose, setDisplayName }  from 'recompose';
 import { connect } from 'react-redux';

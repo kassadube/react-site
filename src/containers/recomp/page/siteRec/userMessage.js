@@ -79,6 +79,7 @@ const UserMessage = () =>
   </div>;
   
   // Mock Service
+  /*
 const noUsers = [];
 const users = [
   { name: "Tim", status: "active" },
@@ -86,6 +87,7 @@ const users = [
   { name: "Joe", status: "inactive" },
   { name: "Jim", status: "pending" },
 ];
+*/
 function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

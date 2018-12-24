@@ -1,8 +1,7 @@
 
-import React, {useState, Component, ReactDom } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types'
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 //const { Component, ReactDOM } = React;
 const {  findDOMNode } = ReactDOM;

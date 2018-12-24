@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux-immutable';
-import { routerMiddleware, connectRouter } from 'connected-react-router/immutable';
+import { connectRouter } from 'connected-react-router/immutable';
 import counter from '../containers/counter';
 import auth from '../containers/auth';
 

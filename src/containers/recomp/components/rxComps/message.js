@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { render } from "react-dom"
+import React from 'react';
 import {  interval, from , zip} from "rxjs"
-import { map, tap ,distinctUntilChanged, startWith, scan, switchMap, takeWhile} from 'rxjs/operators';
+import { map, tap , scan, switchMap, takeWhile} from 'rxjs/operators';
 import {  
   componentFromStreamWithConfig
 } from "recompose"
@@ -20,7 +19,6 @@ const createTypewriter = (message, speed, pause) =>
     from(message),
     interval(speed),
     letter => {
-      console.log(letter);
       return letter;
     }
   ).pipe(
@@ -34,8 +32,7 @@ const StreamingApp = componentFromStream(props$ =>
     switchMap(props =>
       createTypewriter(props.message, props.speed, props.pause)
     ),    
-    map(message => ({ message })),
-    tap(m=>console.log(m)),
+    map(message => ({ message })),    
     map(ShowMessage)
   )
 )
