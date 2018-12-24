@@ -10,16 +10,24 @@ class Page extends React.Component {
         
     }
     componentDidMount() {
+        this._isMounted = true;
         this.timerID = setInterval(
           () => this.tick(),
           3000
         );
       }
-    tick() {
-        this.setState({
-          data: data
-        });
+      componentWillUnmount() {
+        this._isMounted = false;
         clearInterval(this.timerID);
+      }
+    tick() {
+        if(this._isMounted)
+        {
+            this.setState({
+            data: data
+            });
+            clearInterval(this.timerID);
+        }
       }
     render(){
         const data = this.state.data;

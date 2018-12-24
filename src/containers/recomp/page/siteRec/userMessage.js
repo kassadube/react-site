@@ -9,10 +9,14 @@ const User = ({ name, status }) =>
 const withUserData = lifecycle({
   state: { loading: true },
   componentDidMount() {
+    this._isMounted = true;
     fetchData().then(
-      (users) => this.setState({ users, loading: false }),
-      (error) => this.setState({ error, loading: false })
+      (users) => {if(this._isMounted)this.setState({ users, loading: false })},
+      (error) => {if(this._isMounted)this.setState({ error, loading: false })}
     );
+  },
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 });
 

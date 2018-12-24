@@ -6,8 +6,14 @@ import Header from '../../components/header';
 const withUserData = lifecycle({
   state: { loading: true },
   componentDidMount() {
-    fetchData().then((data) =>
-      this.setState({ loading: false, ...data }));
+    this._isMounted = true;
+    fetchData().then((data) =>{
+      if(this._isMounted)
+        this.setState({ loading: false, ...data })
+    });
+  },
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 });
 
