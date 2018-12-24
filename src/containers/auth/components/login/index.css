@@ -1,0 +1,13 @@
+.login-input-text {
+    color: #c9ced0;
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+.login-input-text input[type="text"] ,.login-input-text input[type="password"]{
+    margin: 0 0 1em 0;
+    height: auto;
+}
+.login-input {
+    width: 100%;    
+    color: black;
+}
