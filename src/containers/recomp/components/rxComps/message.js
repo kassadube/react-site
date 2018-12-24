@@ -1,6 +1,6 @@
 import React from 'react';
 import {  interval, from , zip} from "rxjs"
-import { map, tap , scan, switchMap, takeWhile} from 'rxjs/operators';
+import { map, tap , scan, switchMap, takeWhile, repeat} from 'rxjs/operators';
 import {  
   componentFromStreamWithConfig
 } from "recompose"
@@ -22,7 +22,13 @@ const createTypewriter = (message, speed, pause) =>
       return letter;
     }
   ).pipe(
-    scan((acc, curr) => acc + curr),
+    repeat(3),
+    scan((acc, curr) =>{
+      if(acc === message)
+        return curr;
+      else
+        return acc + curr
+    } ),
     takeWhile(() => !pause)
     )
 

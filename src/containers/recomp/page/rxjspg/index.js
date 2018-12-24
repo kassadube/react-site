@@ -15,7 +15,7 @@ import Message from '../../components/rxComps/message';
 const Rxjspg = () =>{
   const [interval, setInterval] = useState(1000);
   const[pause, setPause] = useState(false);
-  const msg = useMemo(() => <Message  message={"abcdefghijklmnopqr"}  speed={2000} pause={pause}/>, [pause]);
+  const msg = useMemo(() => <Message  message={"abcdefghij"}  speed={500} pause={pause}/>, [pause]);
   console.log("render main");
   return (
   <div className="PD10">
