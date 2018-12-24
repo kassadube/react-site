@@ -9,3 +9,7 @@ export const authSelector = state =>{ return (
 }
 
 export const tokenSelector = state =>{ return localStorage.get('token');}
+export const errorSelector = state =>{
+     return state.getIn(['auth','error']);
+    
+}

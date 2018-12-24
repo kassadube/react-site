@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { authUser_ACTION } from '../../actions';
-import { authSelector } from '../../selectors';
+import { authSelector, errorSelector} from '../../selectors';
 import config from '../../../../config';
 import SigninUI from '../../../../components/SigninUI';
 import * as imagesBank from '../../../../images/constants';
@@ -33,6 +33,7 @@ class Login extends React.Component {
       }
 
     render(){
+      console.log("LOGIN RENDER", this.props);
       return(
         <div  className="login-section">  
            
@@ -58,6 +59,7 @@ class Login extends React.Component {
               <div>
                   <button> send </button>
               </div>
+              <div>{this.props.error}</div>
           </form>
           --{config.URL.SIGNIN}--
           <Link to="/">Home</Link>
@@ -73,6 +75,7 @@ class Login extends React.Component {
 
 const mapStateToProps = state => ({
     loged: authSelector(state),
+    error: errorSelector(state),
   })
   
   const mapDispatchToProps = dispatch => (
