@@ -1,3 +1,4 @@
 import Main from './main';
+import Slider from './slider';
 
-export default { Main};
+export default { Main, Slider};

@@ -1,6 +1,6 @@
 import React from 'react';
 import HelloChild from './HelloChild';
-import LogProps from '../logProps';
+//import LogProps from '../logProps';
 
 const Hello = () => (
   <div>

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { authUser,authUser_ACTION } from '../../actions';
+import { authUser_ACTION } from '../../actions';
 import { authSelector } from '../../selectors';
 import config from '../../../../config';
 import SigninUI from '../../../../components/SigninUI';

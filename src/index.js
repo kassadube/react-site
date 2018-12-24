@@ -5,7 +5,8 @@ import * as serviceWorker from './serviceWorker';
 
 import './skeleton.css';
 import './index.css';
-
+//import LogRocket from 'logrocket';
+//LogRocket.init('sgddb6/test');
 ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

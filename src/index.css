@@ -10,7 +10,8 @@ body {
   background: -o-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
   background: -ms-linear-gradient(-75deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
   background: linear-gradient(165deg, #085992 19%, #538bc6 36%, #86b0dc 81%);
-  overflow-y: hidden; }
+  overflow-y: hidden; 
+color: white}
 
   div#root, div.context-provider, div.app-layout.container-fluid {
     width: inherit;
@@ -23,4 +24,9 @@ body {
     h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
         margin-bottom: 0rem;
+    }
+  
+    .PD10{
+padding:10px;
+
     }

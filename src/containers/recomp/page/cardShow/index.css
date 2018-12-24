@@ -1,0 +1,14 @@
+.app-container {
+    min-height: 100%;
+    position: relative;
+}
+
+.body-container {
+    padding: 10px;
+    padding-bottom: 85px; /* Height of the footer */
+    height:430px;
+    overflow-y: scroll;
+}
+.clear{
+    clear: both;
+}

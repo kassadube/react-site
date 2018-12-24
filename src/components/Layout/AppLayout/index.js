@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { bindActionCreators } from 'redux';
+//import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ContentLayout from '../ContentLayout';
@@ -18,7 +18,7 @@ class AppLayout extends React.Component {
     {
         let {history} = props;
         
-        if(history.location.pathname == '/pingpong')
+        if(history.location.pathname === '/pingpong')
         {    
              history.push("/login");
              
@@ -28,7 +28,7 @@ class AppLayout extends React.Component {
     render()
     {
         let {history} = this.props;
-        if(history.location.pathname == '/login')
+        if(history.location.pathname ==='/login')
         {    
              return(
                 <LoginLayout />
