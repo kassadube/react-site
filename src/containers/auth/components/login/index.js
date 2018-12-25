@@ -52,8 +52,10 @@ class Login extends React.Component {
                         <p>password</p>
                         <input type="password" className="login-input" name="password" id="password" value={this.state.password} onChange={this.handleChange}/>
                     </div>
-                    <div className="login-input-text">
-                        <button>send</button>
+                    <div className="row">
+                    <div className="five columns offset-by-seven">
+                        <button className="login-button">Login</button>
+                    </div>
                     </div>
                     <div>{this.props.error}</div>
                 </form>

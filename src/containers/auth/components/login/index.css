@@ -11,3 +11,13 @@
     width: 100%;    
     color: black;
 }
+.login-section .login-section-form .login-button {
+    width: 95%;
+    color: #132e4a;
+    font-weight: 400;
+    background-color: #4bdcf2;
+    border-radius: 13px;
+    padding: 4px 25px;
+    border: none;
+    transition: background-color .2s;
+}

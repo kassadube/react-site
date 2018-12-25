@@ -8,6 +8,7 @@ const initialState = Immutable.Map({ loged :1, username: '', password: ''});
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case types.AUTH_USER:
+        console.log("Auth Reducer ", action);
         return state.set('loged', state.get('loged') + 1)
                   .set('error', null)
                   .set('username', action.payload.username)

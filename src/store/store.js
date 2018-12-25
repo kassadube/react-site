@@ -9,18 +9,22 @@ import thunk from 'redux-thunk';
 import Immutable from 'immutable';
 import epics from './root_epics';
 import reducer from './root_reducer';
+import auth from '../containers/auth';
+
 
 export const history = createBrowserHistory();
 
 const epicMiddleware = createEpicMiddleware();
 const initialState = Immutable.Map();
+const authMiddleware = [auth.middlewares.customMiddleware];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
+console.log(auth.middlewares.default)
 const middlewares = composeEnhancers(
   //applyMiddleware(createLogger()),
   applyMiddleware(thunk),
   applyMiddleware(routerMiddleware(history)),
+  applyMiddleware(...authMiddleware),
   applyMiddleware(epicMiddleware),
 );
 
