@@ -8,7 +8,12 @@ export const authSelector = state =>{ return (
     })
 }
 
-export const tokenSelector = state =>{ return localStorage.get('token');}
+export const tokenSelector = state =>{ return { 'token' : localStorage.getItem('token'), 
+    expire : localStorage.getItem('token-expiration')}};
+export const isAuthenticateSelector = state =>{ 
+    let res=state.getIn(['auth','isAuthenticate']);
+    return res === true? true : false;
+}
 export const errorSelector = state =>{
      return state.getIn(['auth','error']);
     
