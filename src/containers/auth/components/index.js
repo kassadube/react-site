@@ -1,3 +1,4 @@
 import Login from './login';
+import SignOut from './signOut';
 
-export default { Login };
+export default { Login, SignOut};

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { authUser_ACTION } from '../../actions';
-import { authSelector, errorSelector} from '../../selectors';
+import { authSelector, errorSelector,isAuthenticateSelector} from '../../selectors';
 import config from '../../../../config';
 import SigninUI from '../../../../components/SigninUI';
 import * as imagesBank from '../../../../images/constants';
@@ -21,6 +21,7 @@ class Login extends React.Component {
           };
 
     }
+    
     handleChange = event => {
         this.setState({
           [event.target.id]: event.target.value
@@ -70,6 +71,7 @@ class Login extends React.Component {
 const mapStateToProps = state => ({
     loged: authSelector(state),
     error: errorSelector(state),
+    isAuthenticate: isAuthenticateSelector(state)
   })
   
   const mapDispatchToProps = dispatch => (

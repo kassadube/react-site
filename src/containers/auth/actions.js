@@ -22,6 +22,11 @@ export const authUser = (login) => ({
     });*/
 }
 
+export const unAuthUser_ACTION = (login) => (dispatch) => { 
+   
+    dispatch({type: types.UN_AUTH_USER});
+}
+
 export const authError = (error) => {
   if (error.code === -3007) {
       error.message = translate('lblPasswordIsWrong');

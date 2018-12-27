@@ -16,6 +16,7 @@ const Hook = Hooks.components.Main;
 const Slider = Hooks.components.Slider;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
+const SignOut = Auth.components.SignOut;
 
 const Routes = ()=>{
 
@@ -36,6 +37,7 @@ const Routes = ()=>{
       <Route exact path="/recomp/rxjspg" component={Recomp.Page.Rxjspg} /> 
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
+      <Route path="/signOut" component={SignOut} />
       <Route component={NoMatch} />
     </Switch>
     )

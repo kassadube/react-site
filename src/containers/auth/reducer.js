@@ -7,6 +7,10 @@ import * as types from './actionTypes';
 const initialState = Immutable.Map({ loged :1, username: '', password: '', isAuthenticate: false});
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case types.UN_AUTH_USER:
+      localStorage.removeItem('token');
+      localStorage.removeItem('token-expiration');
+      return initialState;
     case types.AUTH_USER:
         console.log("Auth Reducer ", action);
         return state.set('loged', state.get('loged') + 1)

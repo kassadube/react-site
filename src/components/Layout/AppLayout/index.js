@@ -24,11 +24,11 @@ class AppLayout extends React.Component {
         if(!isAuthenticate && token.token != null )
             props.authUser();
         else{
-            if(!isAuthenticate && history.location.pathname != '/login' )
-            {    
-                history.push("/login");
-                
+            if(!isAuthenticate && history.location.pathname != '/login' ){    
+                history.push("/login");                
             }
+            else if(isAuthenticate && history.location.pathname === '/login')
+                history.push("/");
         }
         return state;
     }
