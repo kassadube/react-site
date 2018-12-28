@@ -11,6 +11,7 @@ const NavBar = () => (
         <li><Link to="/hook">Hook</Link></li>
         <li><Link to="/recomp">Recomp</Link></li>
         <li><Link to="/pingpong">pingpong</Link></li>
+        <li><Link to="/fleet">fleet</Link></li>
         <li><Link to="/signout">signout</Link></li>
       </ul>
     </div>

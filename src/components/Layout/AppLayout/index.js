@@ -28,7 +28,7 @@ class AppLayout extends React.Component {
                 history.push("/login");                
             }
             else if(isAuthenticate && history.location.pathname === '/login')
-                history.push("/");
+                history.push("/fleet");
         }
         return state;
     }
