@@ -6,7 +6,10 @@ const Header = () => {
 
     return (
         <header className="app-header">
-            <NavBar />
+            <div className="left-logos">
+                <div class="appTitle">Pointer Connect</div>
+            </div>
+           {/* <NavBar />*/}
         </header>
     )
 }

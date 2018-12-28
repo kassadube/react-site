@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as types from './actionTypes';
-import config from '../../config';
-import translate from '../../constants/translate';
+import config from '../../../config';
+import translate from '../../../constants/translate';
 
 export const customMiddleware = store => next => action => {
     console.log("Middleware triggered:", action);

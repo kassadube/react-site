@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 import * as types from './actionTypes';
-
+import axios from 'axios';
 
 
 
@@ -10,6 +10,7 @@ const reducer = (state = initialState, action) => {
     case types.UN_AUTH_USER:
       localStorage.removeItem('token');
       localStorage.removeItem('token-expiration');
+      axios.defaults.headers.common.Authorization = '';
       return initialState;
     case types.AUTH_USER:
         console.log("Auth Reducer ", action);
@@ -18,6 +19,7 @@ const reducer = (state = initialState, action) => {
                   .set('username', action.payload.username)
                   .set('password', action.payload.password);
     case types.AUTH_USER_SUCCESS:
+        axios.defaults.headers.common.Authorization = `Bearer ${action.payload.data.token}`;
           localStorage.setItem('token', action.payload.data.token);
           localStorage.setItem('token-expiration', action.payload.data.expire);
           return state.set('loged', state.get('loged') + 1)

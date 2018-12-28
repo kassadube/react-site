@@ -8,12 +8,11 @@ import store, {history} from './store/store';
 
 class Root  extends React.Component {
   render(){
-      return(
-        <div>
+      return(        
           <Provider store={store}>
             <App history={history} />
           </Provider>
-       </div>);
+      );
   }
 
 }

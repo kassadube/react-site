@@ -11,4 +11,12 @@ header.app-header {
     line-height: 42px;
     /* Approximation due to font substitution */
     text-align: left;
-    justify-content: space-between; }
+    justify-content: space-between; 
+}
+
+div.left-logos {
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

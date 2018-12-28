@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 const NavBar = () => (
-  <div>
-    <div>
+  <div>    
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/hello">Hello</Link></li>
@@ -14,7 +13,6 @@ const NavBar = () => (
         <li><Link to="/fleet">fleet</Link></li>
         <li><Link to="/signout">signout</Link></li>
       </ul>
-    </div>
   </div>
 )
 

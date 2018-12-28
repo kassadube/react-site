@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { unAuthUser_ACTION } from '../../actions';
-import { authSelector, errorSelector} from '../../selectors';
+import { unAuthUser_ACTION } from '../../redux/actions';
+import { authSelector, errorSelector} from '../../redux/selectors';
 import config from '../../../../config';
 import SigninUI from '../../../../components/SigninUI';
 import * as imagesBank from '../../../../images/constants';

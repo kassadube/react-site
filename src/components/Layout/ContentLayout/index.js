@@ -2,13 +2,13 @@ import React from 'react'
 import Header from '../Header';
 import Routes from '../Routes';
 
+import  './index.css';
 const ContentLayout = (props) =>{
 
     return (
-        <div>
+        <div className="app-layout container-fluid">
             <Header /> 
-            <Routes />
-            
+            <Routes />            
         </div>
     )
 

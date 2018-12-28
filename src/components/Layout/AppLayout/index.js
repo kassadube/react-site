@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ContentLayout from '../ContentLayout';
 import LoginLayout from '../LoginLayout';
-import {tokenSelector, isAuthenticateSelector} from '../../../containers/auth/selectors';
-import * as types from '../../../containers/auth/actionTypes';
+import {tokenSelector, isAuthenticateSelector} from '../../../containers/auth/redux/selectors';
+import * as types from '../../../containers/auth/redux/actionTypes';
 
 class AppLayout extends React.Component {
 
