@@ -1,4 +1,4 @@
-import Main from './main';
+import Counter from './counter';
 import Slider from './slider';
 
-export default { Main, Slider};
+export default { Counter, Slider};

@@ -25,8 +25,8 @@ const Routes = ()=>{
       <Route exact path="/" component={Home} />
       <Route path="/hello" component={Hello} />
       <Route path="/counter" component={Cntr} />
-      <Route exact path="/hook" component={Hook} />
-      <Route path="/hook/slider" component={Slider} />  
+      <Route exact path="/hook" component={Hooks.pages.Main} />
+      <Route path="/hook/slider" component={Hooks.pages.Slider} />  
       <Route exact path="/recomp" component={Recomp.Page.CardShow} />   
       <Route exact path="/recomp/plain" component={Recomp.Page.Plain} />  
       <Route exact path="/recomp/resite" component={Recomp.Page.Resite} /> 
