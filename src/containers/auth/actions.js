@@ -13,14 +13,18 @@ export const authUser = (login) => ({
     const { username, password } = login;
     const language = 1;
     dispatch(authUser(login));
-    axios.post(config.URL.SIGNIN, { username, password, langId: language })
+    /*axios.post(config.URL.SIGNIN, { username, password, langId: language })
       .then((response )=> {
         dispatch({ type: types.AUTH_USER_SUCCESS, payload: { data: response.data } });
       })
-      .catch((error) => {
-        debugger
+      .catch((error) => {        
         dispatch(authError(error.response.data));
-    });
+    });*/
+}
+
+export const unAuthUser_ACTION = (login) => (dispatch) => { 
+   
+    dispatch({type: types.UN_AUTH_USER});
 }
 
 export const authError = (error) => {

@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { authUser_ACTION } from '../../actions';
-import { authSelector } from '../../selectors';
+import { authSelector, errorSelector,isAuthenticateSelector} from '../../selectors';
 import config from '../../../../config';
 import SigninUI from '../../../../components/SigninUI';
 import * as imagesBank from '../../../../images/constants';
 
-
+import './index.css';
 
 class Login extends React.Component {
     constructor (props) {
@@ -21,6 +21,7 @@ class Login extends React.Component {
           };
 
     }
+    
     handleChange = event => {
         this.setState({
           [event.target.id]: event.target.value
@@ -33,39 +34,35 @@ class Login extends React.Component {
       }
 
     render(){
+      console.log("LOGIN RENDER", this.props);
       return(
-        <div  className="login-section">  
-           
+        <div  className="login-section">        
            <div className="row ">
-            
-            <div  className="login-section-form four columns offset-by-one">
-           
+            <div  className="login-section-form four columns offset-by-one">           
                 <div className="row">
                   <img alt="Pointer Logo" src={imagesBank.POINTER_LOGO} />
                   </div>
                   <h5>Pointer Connect</h5>
                   <hr/>
-               
-          <form onSubmit={this.handleSubmit}>
-              <div>
-                  <span> user name</span>
-                  <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
-              </div>
-              <div>
-                  <span>password</span>
-                  <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange}/>
-              </div>
-              <div>
-                  <button> send </button>
-              </div>
-          </form>
-          --{config.URL.SIGNIN}--
-          <Link to="/">Home</Link>
+                  <form onSubmit={this.handleSubmit}>
+                    <div className="login-input-text">
+                        <p> user name</p>
+                        <input type="text" className="login-input" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
+                    </div>
+                    <div className="login-input-text">
+                        <p>password</p>
+                        <input type="password" className="login-input" name="password" id="password" value={this.state.password} onChange={this.handleChange}/>
+                    </div>
+                    <div className="row">
+                    <div className="five columns offset-by-seven">
+                        <button className="login-button">Login</button>
+                    </div>
+                    </div>
+                    <div>{this.props.error}</div>
+                </form>
+                <Link to="/">Home</Link>
+            </div>          
           </div>
-          <SigninUI />
-          </div>
-          
-         
        </div>);
   }
 
@@ -73,6 +70,8 @@ class Login extends React.Component {
 
 const mapStateToProps = state => ({
     loged: authSelector(state),
+    error: errorSelector(state),
+    isAuthenticate: isAuthenticateSelector(state)
   })
   
   const mapDispatchToProps = dispatch => (
