@@ -19,7 +19,7 @@ const initialState = Immutable.Map();
 const authMiddleware = [auth.middlewares.customMiddleware];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-console.log(auth.middlewares.default)
+
 const middlewares = composeEnhancers(
   //applyMiddleware(createLogger()),
   applyMiddleware(thunk),

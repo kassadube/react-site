@@ -1,6 +1,12 @@
-const initalState = Map({
-    // authenticated: false,
-    error: Map({}),
+import { Map, List, fromJS } from 'immutable';
+import packageJson from '../../../../package.json';
+import config from '../../../config';
+
+const InitalState = Map({
+    isAuthenticate: false,
+    username: '', 
+    password: '',
+    error: '',
     showWarningMessage: false,
     accountInfo: Map({
         appLogo: '',
@@ -46,4 +52,4 @@ const initalState = Map({
     loginDicChange: 0
 });
 
-export default initalState;
+export default InitalState;

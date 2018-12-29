@@ -19,7 +19,7 @@ class AppLayout extends React.Component {
     }
     static getDerivedStateFromProps(props, state)
     {
-        console.log(props);
+       
         let {history, isAuthenticate, token} = props;
         if(!isAuthenticate && token.token != null )
             props.authUser();
@@ -59,9 +59,10 @@ const mapStateToProps = state => ({
   })
   
   const mapDispatchToProps = dispatch => ({
-      authUser : ()=>{ dispatch({
-         type: types.AUTH_USER_SUCCESS, payload: { data: tokenSelector() } }
-      )}
+      authUser : ()=>{ 
+          dispatch({type: types.AUTH_USER_SUCCESS, payload: { data: tokenSelector() } })
+          dispatch({type: types.AUTH_USER_DEFINITION_REQUEST, payload:  tokenSelector()  })
+        }
   }
     
   )
