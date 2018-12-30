@@ -5,7 +5,7 @@ import translate from '../../../constants/translate';
 
 import './index.css';
 const Header = (props) => {
-    const {appLogo, accountLogo} = props;
+    const {appLogo, accountLogo, loginName} = props;
     return (
         <header className="app-header">           
             <div className="left-logos"> 
@@ -16,7 +16,7 @@ const Header = (props) => {
                 <div className="userInfo">
                     <div className="userInfo-sep" ></div>                    
                     <div className="userInfo-dropdown">
-                    <Link to='/signout' className="menu-item">{translate('lblSignOut')}</Link>
+                    <Link to='/signout' className="menu-item">{translate('lblSignOut')}--{loginName}</Link>
                     </div>
                 </div>
                 <img className='right-logo' src={appLogo} />

@@ -2,15 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux';
 import Header from '../Header';
 import Routes from '../Routes';
-import { getAppLogoSelector, getAccountLogoSelector } from "../../../containers/auth/redux/selectors";
+import { getAppLogoSelector, getAccountLogoSelector, getAccountLoginName } from "../../../containers/auth/redux/selectors";
 
 import  './index.css';
 const ContentLayout = (props) =>{
     console.log('ContentLayout', props);
-    const {appLogo, accountLogo} = props;
+    const {appLogo, accountLogo, loginName} = props;
     return (        
         <div className="app-layout container-fluid">
-            <Header appLogo={appLogo} accountLogo={accountLogo}/> 
+            <Header appLogo={appLogo} accountLogo={accountLogo} loginName={loginName}/> 
             <Routes />            
         </div>
     )
@@ -20,7 +20,8 @@ const ContentLayout = (props) =>{
 const mapStateToProps = (state, ownProps) => {
     return {
         appLogo: getAppLogoSelector(state),
-        accountLogo: getAccountLogoSelector(state)
+        accountLogo: getAccountLogoSelector(state),
+        loginName: getAccountLoginName(state),
     }
 }
 

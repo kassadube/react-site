@@ -34,4 +34,9 @@ export const getAccountLogoSelector = createSelector(
     account => account.getIn(['accountLogo'])
 );
 
+export const getAccountLoginName = createSelector(
+    getAccountInfoSelector,
+    account => account.getIn(['loginName'])
+);
+
 
