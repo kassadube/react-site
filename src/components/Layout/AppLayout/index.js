@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ContentLayout from '../ContentLayout';
 import LoginLayout from '../LoginLayout';
-import {tokenSelector, isAuthenticateSelector} from '../../../containers/auth/selectors';
-import * as types from '../../../containers/auth/actionTypes';
+import {tokenSelector, isAuthenticateSelector} from '../../../containers/auth/redux/selectors';
+import * as types from '../../../containers/auth/redux/actionTypes';
 
 class AppLayout extends React.Component {
 
@@ -19,16 +19,16 @@ class AppLayout extends React.Component {
     }
     static getDerivedStateFromProps(props, state)
     {
-        console.log(props);
+       
         let {history, isAuthenticate, token} = props;
         if(!isAuthenticate && token.token != null )
             props.authUser();
         else{
-            if(!isAuthenticate && history.location.pathname != '/login' ){    
+            if(!isAuthenticate && history.location.pathname !== '/login' ){    
                 history.push("/login");                
             }
             else if(isAuthenticate && history.location.pathname === '/login')
-                history.push("/");
+                history.push("/fleet");
         }
         return state;
     }
@@ -59,9 +59,10 @@ const mapStateToProps = state => ({
   })
   
   const mapDispatchToProps = dispatch => ({
-      authUser : ()=>{ dispatch({
-         type: types.AUTH_USER_SUCCESS, payload: { data: tokenSelector() } }
-      )}
+      authUser : ()=>{ 
+          dispatch({type: types.AUTH_USER_SUCCESS, payload: { data: tokenSelector() } })
+          dispatch({type: types.AUTH_USER_DEFINITION_REQUEST, payload:  tokenSelector()  })
+        }
   }
     
   )

@@ -1,0 +1,9 @@
+div.app-layout.container-fluid {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+

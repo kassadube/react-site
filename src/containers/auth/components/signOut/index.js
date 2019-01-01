@@ -1,21 +1,15 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-
-import { unAuthUser_ACTION } from '../../actions';
-import { authSelector, errorSelector} from '../../selectors';
-import config from '../../../../config';
-import SigninUI from '../../../../components/SigninUI';
-import * as imagesBank from '../../../../images/constants';
+import { unAuthUser_ACTION } from '../../redux/actions';
+import { authSelector, errorSelector} from '../../redux/selectors';
+//import config from '../../../../config';
+//import SigninUI from '../../../../components/SigninUI';
+//import * as imagesBank from '../../../../images/constants';
 
 
 
 class SignOut extends React.Component {
-    constructor (props) {
-        super(props); 
-               
-    }
     
     componentDidMount() {
       this.props.unAuthUser();

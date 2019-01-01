@@ -1,17 +1,29 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import Header from '../Header';
 import Routes from '../Routes';
+import { getAppLogoSelector, getAccountLogoSelector, getAccountLoginName } from "../../../containers/auth/redux/selectors";
 
+import  './index.css';
 const ContentLayout = (props) =>{
-
-    return (
-        <div>
-            <Header /> 
-            <Routes />
-            
+    console.log('ContentLayout', props);
+    const {appLogo, accountLogo, loginName} = props;
+    return (        
+        <div className="app-layout container-fluid">
+            <Header appLogo={appLogo} accountLogo={accountLogo} loginName={loginName}/> 
+            <Routes />            
         </div>
     )
 
 }
 
-export default ContentLayout
+const mapStateToProps = (state, ownProps) => {
+    return {
+        appLogo: getAppLogoSelector(state),
+        accountLogo: getAccountLogoSelector(state),
+        loginName: getAccountLoginName(state),
+    }
+}
+
+
+export default connect(mapStateToProps, {})(ContentLayout)

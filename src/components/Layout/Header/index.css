@@ -11,4 +11,50 @@ header.app-header {
     line-height: 42px;
     /* Approximation due to font substitution */
     text-align: left;
-    justify-content: space-between; }
+    justify-content: space-between; 
+}
+div.left-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+div.left-logos img.left-logo {
+    height: 32px;
+    width: 34px;
+    margin-left: 9px;
+    margin-right: 18px; 
+}
+div.right-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+div.right-logos img.right-logo {
+    height: 42px;
+    width: 92px;
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+
+.userInfo{
+    display: flex;
+    align-items: center;
+}
+
+.userInfo > button {
+    width: 60px;
+    background: none;
+    border-top: 2px solid transparent;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    outline: none;
+}
+
+div.userInfo-sep{
+    background-color:  #6f91b5;
+    width: 1px;
+    height: 30px;
+    margin-left:20px;
+    margin-right:21px;
+}

@@ -9,11 +9,13 @@ import NoMatch from '../../NoMatch'
 import Hooks from '../../../containers/hooks';
 import Auth from '../../../containers/auth';
 import Recomp from '../../../containers/recomp';
+import Fleet from '../../../containers/fleet';
+import Test from '../../../containers/test';
 
 const Cntr = Counter.components.Main;
-const Hook = Hooks.components.Main;
+//const Hook = Hooks.components.Main;
 //const Recmp = Recomp.Page;
-const Slider = Hooks.components.Slider;
+//const Slider = Hooks.components.Slider;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
 const SignOut = Auth.components.SignOut;
@@ -37,6 +39,8 @@ const Routes = ()=>{
       <Route exact path="/recomp/rxjspg" component={Recomp.Page.Rxjspg} /> 
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
+      <Route path="/fleet" component={Fleet.pages.Main} />
+      <Route path="/test" component={Test.pages.Main} />
       <Route path="/signOut" component={SignOut} />
       <Route component={NoMatch} />
     </Switch>

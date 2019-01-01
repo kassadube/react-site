@@ -4,7 +4,7 @@ import { ofType } from 'redux-observable';
 import { delay, mapTo } from 'rxjs/operators';
 
 
-const authEpic = action$ => action$.pipe(
+const fleetEpic = action$ => action$.pipe(
     
     ofType( "PING"),
     delay(1000), // Asynchronously wait 1000ms then continue
@@ -12,4 +12,4 @@ const authEpic = action$ => action$.pipe(
   );
   
 
-  export default [authEpic];
+  export default [fleetEpic];

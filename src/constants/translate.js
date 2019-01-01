@@ -7,7 +7,7 @@ const translate = (label) => {
     //let lang = sessionStorage.getItem('lang');
     //if (lang == null) lang = 1;
     if (dictionary) {
-        return dictionary["en"][label] ? dictionary["en"][label].text : label;
+        return dictionary["en"][label] ? dictionary["en"][label] : label;
     }
     return label;
     

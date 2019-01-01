@@ -1,10 +1,10 @@
 import axios from 'axios';
 import * as types from './actionTypes';
-import config from '../../config';
-import translate from '../../constants/translate';
+import config from '../../../config';
+import translate from '../../../constants/translate';
 
 export const customMiddleware = store => next => action => {
-    console.log("Middleware triggered:", action);
+    //console.log("Middleware triggered:", action);
     if(action.type === types.AUTH_USER)
     {
       const { username, password, } = action.payload;
@@ -12,9 +12,10 @@ export const customMiddleware = store => next => action => {
       axios.post(config.URL.SIGNIN, { username, password, langId: language })
         .then((response )=> {
           store.dispatch({ type: types.AUTH_USER_SUCCESS, payload: { data: response.data } });
+          store.dispatch({ type: types.AUTH_USER_DEFINITION_REQUEST, payload: { token: response.data.token } });
         })
         .catch((error) => {        
-          store.dispatch(authError(error.response.data));
+          store.dispatch(authError(error.response));
       });
     }
     return next(action);

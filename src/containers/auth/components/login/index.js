@@ -3,9 +3,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { authUser_ACTION } from '../../actions';
-import { authSelector, errorSelector,isAuthenticateSelector} from '../../selectors';
-import config from '../../../../config';
+import { authUser_ACTION } from '../../redux/actions';
+import { authSelector, errorSelector,isAuthenticateSelector} from '../../redux/selectors';
+//import config from '../../../../config';
+// eslint-disable-next-line no-unused-vars
 import SigninUI from '../../../../components/SigninUI';
 import * as imagesBank from '../../../../images/constants';
 
