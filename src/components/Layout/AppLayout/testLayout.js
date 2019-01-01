@@ -45,4 +45,4 @@ const mapStateToProps = state => ({
   )
   
   const   AppLayout = TestLayout;
-  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TestLayout));
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppLayout));
