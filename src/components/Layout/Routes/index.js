@@ -12,9 +12,9 @@ import Recomp from '../../../containers/recomp';
 import Fleet from '../../../containers/fleet';
 
 const Cntr = Counter.components.Main;
-const Hook = Hooks.components.Main;
+//const Hook = Hooks.components.Main;
 //const Recmp = Recomp.Page;
-const Slider = Hooks.components.Slider;
+//const Slider = Hooks.components.Slider;
 const Pingpong = Counter.components.Pingpong;
 const Login = Auth.components.Login;
 const SignOut = Auth.components.SignOut;

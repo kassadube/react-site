@@ -1,6 +1,6 @@
-import axios from 'axios';
+//import axios from 'axios';
 import * as types from './actionTypes';
-import config from '../../../config';
+//import config from '../../../config';
 import translate from '../../../constants/translate';
 
 export const authUser = (login) => ({
@@ -9,17 +9,8 @@ export const authUser = (login) => ({
   });
 
 
-  export const authUser_ACTION = (login) => (dispatch) => { 
-    const { username, password } = login;
-    const language = 1;
-    dispatch(authUser(login));
-    /*axios.post(config.URL.SIGNIN, { username, password, langId: language })
-      .then((response )=> {
-        dispatch({ type: types.AUTH_USER_SUCCESS, payload: { data: response.data } });
-      })
-      .catch((error) => {        
-        dispatch(authError(error.response.data));
-    });*/
+  export const authUser_ACTION = (login) => (dispatch) => {     
+    dispatch(authUser(login));    
 }
 
 export const unAuthUser_ACTION = (login) => (dispatch) => { 

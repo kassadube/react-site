@@ -3,12 +3,7 @@ import Header from '../../components/header';
 import RangeSlider from '../../components/slider';
 
 class Slider extends React.Component {
-    constructor (props) {
-        super(props);
-        
-        
-        
-    }
+    
     componentDidMount() {        
     }
     componentWillUnmount() {        

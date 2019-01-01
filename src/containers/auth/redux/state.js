@@ -1,4 +1,4 @@
-import { Map, List, fromJS } from 'immutable';
+import { Map, List } from 'immutable';
 import packageJson from '../../../../package.json';
 import config from '../../../config';
 

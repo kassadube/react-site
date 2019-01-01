@@ -1,7 +1,7 @@
 import { of } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 import { ofType } from 'redux-observable';
-import { delay, mapTo, map, catchError, mergeMap, tap } from 'rxjs/operators';
+import { delay, mapTo, map, catchError, mergeMap } from 'rxjs/operators';
 import * as types from './actionTypes';
 import config from '../../../config';
 import SignRequest from '../../../constants/SignRequest';

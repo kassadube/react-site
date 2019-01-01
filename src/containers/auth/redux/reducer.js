@@ -1,4 +1,4 @@
-import { Map, fromJS, List } from 'immutable';
+import { Map, fromJS } from 'immutable';
 import * as types from './actionTypes';
 import axios from 'axios';
 import InitialState from './state';

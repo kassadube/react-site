@@ -3,16 +3,7 @@ import Header from '../../components/header';
 import Counter from '../../components/counter';
 
 class Main extends React.Component {
-    constructor (props) {
-        super(props);
-        
-        
-        
-    }
-    componentDidMount() {        
-    }
-    componentWillUnmount() {        
-    }
+    
     
     render(){
         
