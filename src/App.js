@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router/immutable';
-import AppLayout from './components/Layout/AppLayout';
+import AppLayout from './components/Layout/AppLayout/testLayout';
 
 const App = ({ history }) => {
   return (
