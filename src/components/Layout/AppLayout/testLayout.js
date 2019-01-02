@@ -3,7 +3,6 @@ import React from 'react';
 //import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import ContentLayout from '../ContentLayout';
 import LoginLayout from '../LoginLayout';
 import {tokenSelector, isAuthenticateSelector} from '../../../containers/auth/redux/selectors';
 import * as types from '../../../containers/auth/redux/actionTypes';
@@ -17,11 +16,7 @@ class TestLayout extends React.Component {
         this.history = props.history;    
             
     }
-    static getDerivedStateFromProps(props, state)
-    {
-       
-        
-    }
+    
     render()
     {  
         return(
