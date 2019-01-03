@@ -5,14 +5,63 @@
     padding:10px;
 }
 
-.table-holder, .paging-holder {
+.table-holder, .paging-holder, .button-holder {
     width: 860px;
-    margin:50px auto 0px auto;
+    margin:20px auto 0px auto;
     text-align: center
 }
-
+.scroll{
+    max-height: 650px;
+    overflow-y: scroll;
+}
 .paging-holder span{
     font-weight: bold;
     padding: 10px;
     cursor: pointer;
+}
+
+.button-holder button{
+    margin:0px 10px;
+}
+.button-holder input[type="button"], .button-holder button {
+    display: inline-block;
+    height: 28px;
+    padding: 0 30px;
+    color: black;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+.headerSortDown:after,
+.headerSortUp:after {
+  content: ' ';
+  position: relative;
+  left: 2px;
+  border: 8px solid transparent;
+}
+
+.headerSortDown:after {
+  top: 10px;
+  border-top-color: silver;
+}
+
+.headerSortUp:after {
+  bottom: 15px;
+  border-bottom-color: silver;
+}
+
+.headerSortDown,
+.headerSortUp {
+  padding-right: 10px;
 }

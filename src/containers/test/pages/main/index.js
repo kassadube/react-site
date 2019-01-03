@@ -7,19 +7,21 @@ import Table from '../../components/table';
 import data from '../../data';
 
 import './index.css'
-import { debug } from 'util';
 
 class Main extends Component {
     constructor(props){
         super(props);
+        this.name ='MAIN';
         this.pageLength = 10;
-        const sort = {key:'name', direction:1, type: 'string'};
+        const sort = {key:'id', direction:1, type: 'int'};
         this.state = {
+             pageLength: 10,
              dataLength : data.length,
              pageCount: Math.ceil(data.length/this.pageLength),
              currentPage: 1,
              sort: sort
             };
+            this.updateSortColumn = this.updateSortColumn.bind(this);
     }
 
     static getDerivedStateFromProps(props, state)
@@ -41,12 +43,24 @@ class Main extends Component {
             currentPage: currentPage
           });
     }
-
+    handleBTClick = count =>{
+        this.setState({...this.state,
+            currentPage: 1,
+            pageLength: count,
+            pageCount: Math.ceil(data.length/count),
+          });
+       // this.pageLength = count;
+    }
     calcData (sData){
         const currentPage = this.state.currentPage;
-        let start = (currentPage -1) * this.pageLength;
-        let end = start + this.pageLength;
+        let start = (currentPage -1) * this.state.pageLength;
+        let end = start + this.state.pageLength;
         return sData.slice(start, end);
+    }
+    
+    updateSortColumn(sort)
+    {
+        this.setState({...this.state, sort: sort});
     }
 
     sort(){
@@ -70,21 +84,31 @@ class Main extends Component {
     
 
     render(){
+        console.log("state",this.state);
         const sortedData = this.sort();        
         const tbData = this.calcData(sortedData);
-        const selected = this.state.currentPage;        
+        const selected = this.state.currentPage; 
+        const  {pageLength} = this.state
         return (
             <div className='main-test'>
                 <header>test -- --</header>
+                <div className="button-holder">
+                    <button onClick={()=>this.handleBTClick(10)} className={pageLength === 10 ? 'button-primary' : '' }>10</button>
+                    <button onClick={()=>this.handleBTClick(20)} className={pageLength === 20 ? 'button-primary' : '' }>20</button>
+                    <button onClick={()=>this.handleBTClick(50)} className={pageLength === 50 ? 'button-primary' : '' }>50</button>
+                    <button onClick={()=>this.handleBTClick(100)} className={pageLength === 100 ? 'button-primary' : '' }>100</button>
+                </div>
                 <div className='table-holder'>
-                    <Table data={tbData} sort={this.state.sort}/>
+                    <Table data={tbData} sort={this.state.sort} updateSortColumn={this.updateSortColumn}/>
                 </div>
                 <div className="paging-holder">
-                    <span onClick={()=>this.handleClick(-1)}>{'<'}</span>
+                {   this.state.currentPage > 1 ? <span onClick={()=>this.handleClick(-1)}>{'<'}</span> : ''}
+                    
                     <select onChange={this.handleChange}  value={selected}>
                     {Array(this.state.pageCount).fill().map((_,i)=> <option key={i}>{i+1}</option> )}
                     </select>
-                    <span onClick={()=>this.handleClick(1)}>{'>'}</span>
+                    {   this.state.currentPage * this.state.pageLength  < data.length ? <span onClick={()=>this.handleClick(1)}>{'>'}</span> : ''}
+                   
                 </div>
             </div>
         )

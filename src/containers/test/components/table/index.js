@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 
+import TableHeaderRow from './tableHeaderRow';
 
 class Table extends Component {
+    constructor(props)
+    {
+        super(props);
+        this.name = 'TABLE';
+    }
 
     /*
     constructor(props)
@@ -13,25 +19,22 @@ class Table extends Component {
     */
 
     render () {
-        const {data, sort} = this.props;
+        const {data, updateSortColumn} = this.props;
         
         return (
-            <div>            
+            <div className={data.length > 10 ? 'scroll' : '' }>            
             <table cellPadding="0">
                 <thead>
                     <tr>
-                        <th>
-                        id
+                        <th onClick={()=>updateSortColumn({key:'id', direction:1, type: 'int'})} >
+                        <span>id</span>                        
+                    </th>
+                        <th onClick={()=>updateSortColumn({key:'postId', direction:1, type: 'int'})}>
+                            <span>postId</span>
                         </th>
-                        <th>
-                            postId
-                        </th>
-                        <th>
-                            name
-                        </th>
-                        <th>
-                            email
-                        </th>
+                    <TableHeaderRow name={'name'} />                        
+                    <TableHeaderRow name={'email'} />                            
+                       
                     </tr>
                 </thead>
                 <tbody>

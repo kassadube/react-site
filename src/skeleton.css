@@ -416,3 +416,9 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+@font-face {
+  font-family: 'Glyphicons';
+
+  src: url('/fonts/glyphicons-halflings-regular.woff2');
+}
