@@ -6,12 +6,12 @@
 }
 
 .table-holder, .paging-holder, .button-holder {
-    width: 860px;
-    margin:20px auto 0px auto;
+    width: 920px;
+    margin:10px auto 0px auto;
     text-align: center
 }
 .scroll{
-    max-height: 650px;
+    max-height: 500px;
     overflow-y: scroll;
 }
 .paging-holder span{
@@ -64,4 +64,5 @@
 .headerSortDown,
 .headerSortUp {
   padding-right: 10px;
+  
 }

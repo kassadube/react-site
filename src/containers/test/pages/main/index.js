@@ -90,8 +90,7 @@ class Main extends Component {
         const selected = this.state.currentPage; 
         const  {pageLength} = this.state
         return (
-            <div className='main-test'>
-                <header>test -- --</header>
+            <div className='main-test'>               
                 <div className="button-holder">
                     <button onClick={()=>this.handleBTClick(10)} className={pageLength === 10 ? 'button-primary' : '' }>10</button>
                     <button onClick={()=>this.handleBTClick(20)} className={pageLength === 20 ? 'button-primary' : '' }>20</button>

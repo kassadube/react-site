@@ -19,21 +19,17 @@ class Table extends Component {
     */
 
     render () {
-        const {data, updateSortColumn} = this.props;
+        const {data, updateSortColumn, sort} = this.props;
         
         return (
             <div className={data.length > 10 ? 'scroll' : '' }>            
             <table cellPadding="0">
                 <thead>
                     <tr>
-                        <th onClick={()=>updateSortColumn({key:'id', direction:1, type: 'int'})} >
-                        <span>id</span>                        
-                    </th>
-                        <th onClick={()=>updateSortColumn({key:'postId', direction:1, type: 'int'})}>
-                            <span>postId</span>
-                        </th>
-                    <TableHeaderRow name={'name'} />                        
-                    <TableHeaderRow name={'email'} />                            
+                    <TableHeaderRow name={'id'} updateSortColumn={updateSortColumn} sort={sort}/>
+                    <TableHeaderRow name={'postId'} updateSortColumn={updateSortColumn} sort={sort}/>
+                    <TableHeaderRow name={'name'} updateSortColumn={updateSortColumn} sort={sort}/>                        
+                    <TableHeaderRow name={'email'} updateSortColumn={updateSortColumn} sort={sort}/>                            
                        
                     </tr>
                 </thead>
@@ -41,10 +37,10 @@ class Table extends Component {
             {data.map((item, key) =>{
                 return (
                     <tr key={key}>                    
-                        <td>{item.id}</td>
-                        <td>{item.postId}</td>
-                        <td>{item.name}</td>
-                        <td>{item.email}</td>                   
+                        <td width='10%'>{item.id}</td>
+                        <td width='10%'>{item.postId}</td>
+                        <td width='50%'>{item.name}</td>
+                        <td width='30%'>{item.email}</td>                   
                     </tr>
               );
             })}
