@@ -25,6 +25,7 @@ const Routes = ()=>{
     return (
     <Switch>
       <Route exact path="/" component={Test.pages.Main} />
+      <Route exact path="/testsite" component={Test.pages.Main} />      
       <Route path="/hello" component={Hello} />
       <Route path="/counter" component={Cntr} />
       <Route exact path="/hook" component={Hooks.pages.Main} />

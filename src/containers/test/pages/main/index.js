@@ -24,12 +24,7 @@ class Main extends Component {
             this.updateSortColumn = this.updateSortColumn.bind(this);
     }
 
-    static getDerivedStateFromProps(props, state)
-    {
-        console.log('main update props', state);
-        return state;
-    }
-
+    
     handleChange = event => {
         const currentPage = parseInt(event.target.value);
         this.setState({...this.state,
@@ -84,7 +79,7 @@ class Main extends Component {
     
 
     render(){
-        console.log("state",this.state);
+        
         const sortedData = this.sort();        
         const tbData = this.calcData(sortedData);
         const selected = this.state.currentPage; 
