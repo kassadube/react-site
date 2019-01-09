@@ -24,3 +24,6 @@ in remots allso
 
 reset last commit
  git reset --hard HEAD~1
+
+ delete remove branch
+ - git push origin :feature/hooks
