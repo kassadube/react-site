@@ -1,4 +1,5 @@
 //import { createSelector } from 'reselect'
+import { NAME} from './constants';
 
-export const pingSelector = state => state.getIn(['counter','isPinging']);
-export const countSelector = state => state.getIn(['counter','val']);
+
+export const columnsSelector = state => state.getIn([NAME,'columns']);
