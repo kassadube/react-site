@@ -4,6 +4,7 @@ import { ConnectedRouter } from 'connected-react-router/immutable';
 import AppLayout from './components/Layout/AppLayout';
 
 const App = ({ history }) => {
+  localStorage.setItem('debug', 'react-site:*');
   return (
     <ConnectedRouter history={history}>
       <AppLayout />

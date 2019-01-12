@@ -37,6 +37,7 @@ const Routes = ()=>{
       <Route exact path="/recomp/siterec" component={Recomp.Page.SiteRec} /> 
       <Route exact path="/recomp/ConnectedApp" component={Recomp.Page.ConnectedApp} /> 
       <Route exact path="/recomp/rxjspg" component={Recomp.Page.Rxjspg} /> 
+      <Route exact path="/recomp/rxjsmove" component={Recomp.Page.Rxjsmove} /> 
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
       <Route path="/fleet" component={Fleet.pages.Main} />

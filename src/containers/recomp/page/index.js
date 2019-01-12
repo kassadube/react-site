@@ -6,6 +6,7 @@ import ReducerApp from './reducerApp';
 import SiteRec from './siteRec';
 import ConnectedApp from './connectedRedux';
 import Rxjspg from './rxjspg';
+import Rxjsmove from './rxjsmove';
 //const ConnectedApp = SiteRec;
 
-export default {CardShow, Plain, Resite, ToggleApp, ReducerApp, SiteRec, ConnectedApp, Rxjspg};
+export default {CardShow, Plain, Resite, ToggleApp, ReducerApp, SiteRec, ConnectedApp, Rxjspg, Rxjsmove};

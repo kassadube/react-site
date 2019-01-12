@@ -14,7 +14,7 @@ const Header = ({headerName, showMenu = true}) => {
                 <h1>{headerName}</h1>
                 {
                     
-                     showMenu ?(<ul>
+                     showMenu ?(<ul className="ul-horz">
                         <li>
                             <Link to="/recomp">Breeds</Link> 
                         </li>
@@ -38,6 +38,9 @@ const Header = ({headerName, showMenu = true}) => {
                         </li>
                         <li>
                             <Link to="/recomp/Rxjspg">Rxjs App</Link> 
+                        </li>
+                        <li>
+                            <Link to="/recomp/Rxjsmove">Rxjs move</Link> 
                         </li>
                     </ul>):(<div></div>)
                 }

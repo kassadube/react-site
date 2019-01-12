@@ -8,6 +8,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "connected-react-router": "6.0.0",
+    "debug": "^4.1.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "history": "^4.7.2",
