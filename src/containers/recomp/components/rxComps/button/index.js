@@ -1,5 +1,6 @@
 import React from 'react';
-import { Subject, timer, from } from "rxjs";
+import ReactDOM from 'react-dom';
+import { Subject, timer, from, Observable,fromEvent  } from "rxjs";
 import {
   retry,
   switchMap,
@@ -49,19 +50,23 @@ class Button extends React.Component {
   }
 
   componentDidMount(){
-    this.log.info('componentDidMount');
+    let btn  = ReactDOM.findDOMNode(this.refs.btn);
+    this.log.info('componentDidMount btn',btn);
+    this.obs = Observable.fromEvent(btn, 'click').subscribe(x=> console.log('FFGFGEEV', x));
+
   }
 
   componentWillUnmount(){
 
     this.log.info('componentWillUnmount');
+    this.obs.unsbscribe();
   }
 
   render ()
   {
     this.log.info('render');
       return (
-        <div>button</div>
+        <button ref='btn'>button</button>
       )
   }
 }
