@@ -6,7 +6,7 @@ import { getAppLogoSelector, getAccountLogoSelector, getAccountLoginName } from 
 
 import  './index.css';
 const ContentLayout = (props) =>{
-    console.log('ContentLayout', props);
+    //console.log('ContentLayout', props);
     const {appLogo, accountLogo, loginName} = props;
     return (        
         <div className="app-layout container-fluid">

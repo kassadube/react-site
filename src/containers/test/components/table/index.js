@@ -3,6 +3,7 @@ import {Component} from 'react';
 
 class Table extends Component {
 
+    /*
     constructor(props)
     {
         super(props);         
@@ -11,7 +12,7 @@ class Table extends Component {
     static getDerivedStateFromProps(props, state)
     {
     }
-
+*/
     render ()    {
         return ("TABLE")
     }

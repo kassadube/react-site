@@ -16,7 +16,7 @@ const authEpic = action$ => action$.pipe(
 const getUserDefinitionEpic = action$ => action$.pipe(    
   ofType(types.AUTH_USER_DEFINITION_REQUEST),
   map(SignRequest),
-  mergeMap(({payload,headers}) => ajax.get(config.URL.GENERAL.ACCOUNT, headers).pipe(
+  mergeMap(({payload,headers}) => ajax.get(config.URL.GENERAL.ACCOUNT, headers).pipe(      
       map(res => res.response),
       //tap((data) =>console.log("RRRR = ", data)),
       map(data => {return {type: types.AUTH_USER_DEFINITION_SUCCESS, payload:data}}),     

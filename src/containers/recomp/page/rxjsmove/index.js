@@ -1,10 +1,8 @@
 
-import React, {useState, useMemo} from 'react';
+import React from 'react';
 import Log from '../../../../constants/log';
 import Button from '../../components/rxComps/button';
-import Ex0 from '../../components/rxComps/ex0';
-import Ex001 from '../../components/rxComps/ex001';
-import Message from '../../components/rxComps/message';
+import Timer from '../../components/rxComps/timer';
 
 
 class Rxjsmove extends React.Component {
@@ -58,6 +56,7 @@ class Rxjsmove extends React.Component {
         <div>
           move
           <Button />
+          <Timer />
         </div>
       )
   }

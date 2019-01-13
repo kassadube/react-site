@@ -14,17 +14,27 @@ import Log from '../../../../../constants/log';
 export const restart$ = new Subject();
 export const orders$ = new Subject();
 export const store$ = new Subject({count: []});
-class Button extends React.Component {
 
+restart$
+  .pipe(
+    tap((x) => console.log("DFDFDF",x)),   
+    tap(() => store$.next({count: []}))
+  ).subscribe();
+const  stream = restart$;
+class Timer extends React.Component {
+  _subscription = null;
   constructor(props)
   {
       super(props); 
-      this.log = Log('Rxjsmove:button');  
+      this.state = {
+        store: {}
+      };
+      this.log = Log('Rxjsmove:Timer');  
       this.log.info('constructor',props);      
   }
   static getDerivedStateFromProps(props, state)
   {
-    Log('Rxjsmove:button').info('getDerivedStateFromProps');  
+    Log('Rxjsmove:Timer').info('getDerivedStateFromProps');  
     return null;
     
   }
@@ -50,21 +60,34 @@ class Button extends React.Component {
 
   componentDidMount(){
     this.log.info('componentDidMount');
+    this._subscription = stream.subscribe(this.handleUpdate);
+    stream.next(2);
   }
 
   componentWillUnmount(){
 
     this.log.info('componentWillUnmount');
+    
+    this._subscription &&
+        this._subscription.unsubscribe &&
+        this._subscription.unsubscribe();
   }
+
+  handleUpdate = store => {
+    debugger
+    this.setState(() => ({
+      store
+    }));
+  };
 
   render ()
   {
     this.log.info('render');
       return (
-        <div>button</div>
+        <div>TIMER</div>
       )
   }
 }
 
 
-  export default Button;
+  export default Timer;
