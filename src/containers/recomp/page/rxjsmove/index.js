@@ -55,7 +55,7 @@ class Rxjsmove extends React.Component {
       return (
         <div>
           move
-          <Button />
+          
           <Timer />
         </div>
       )

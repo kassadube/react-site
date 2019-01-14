@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Subject, timer, from, Observable,fromEvent  } from "rxjs";
+import { Subject, timer, from } from "rxjs";
 import {
   retry,
   switchMap,
@@ -17,17 +16,28 @@ export const restart$ = new Subject();
 export const orders$ = new Subject();
 export const store$ = new Subject({count: []});
 
-class Button extends React.Component {
-
+restart$
+  .pipe(
+    tap((x) => console.log("DFDFDF",x)),   
+    tap(() => store$.next({count: 1}))
+  ).subscribe();
+window.restart$ = restart$;
+window.store$ = store$;
+const  stream = restart$;
+class Timer extends React.Component {
+  _subscription = null;
   constructor(props)
   {
       super(props); 
-      this.log = Log('Rxjsmove:button');  
+      this.state = {
+        store: {count:0}
+      };
+      this.log = Log('Rxjsmove:Timer');  
       this.log.info('constructor',props);      
   }
  /* static getDerivedStateFromProps(props, state)
   {
-    Log('Rxjsmove:button').info('getDerivedStateFromProps');  
+    Log('Rxjsmove:Timer').info('getDerivedStateFromProps');  
     return null;
     
   }
@@ -52,30 +62,36 @@ class Button extends React.Component {
   }
 
   componentDidMount(){
-    let btn  = ReactDOM.findDOMNode(this.refs.btn);
-    this.log.info('componentDidMount btn',btn);
-   // this.obs = Observable.fromEvent(btn, 'click').subscribe(x=> console.log('FFGFGEEV', x));
-
+    this.log.info('componentDidMount');
+    this._subscription = stream.subscribe(this.handleUpdate);
+    stream.next(2);
   }
-  handleUpdate = store => {    
+
+  componentWillUnmount(){
+
+    this.log.info('componentWillUnmount');
+    
+    this._subscription &&
+        this._subscription.unsubscribe &&
+        this._subscription.unsubscribe();
+  }
+
+  handleUpdate = store => {  
+    this.log.info('handleUpdate', store); 
     this.setState(() => ({
       store
     }));
   };
-  componentWillUnmount(){
-
-    this.log.info('componentWillUnmount');
-    this.obs.unsbscribe();
-  }
 
   render ()
   {
+    const {count} = this.state.store;
     this.log.info('render');
       return (
-        <button ref='btn'>button</button>
+        <div>TIMER -- {count}--</div>
       )
   }
 }
 
 
-  export default Button;
+  export default Timer;
