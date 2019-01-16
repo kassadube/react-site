@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Subject, timer, from, Observable,fromEvent  } from "rxjs";
+import { Subject, timer, from, Observable,fromEvent, of  } from "rxjs";
 import {
   retry,
   switchMap,
@@ -13,9 +13,9 @@ import {
 
 import Log from '../../../../../constants/log';
 
-export const restart$ = new Subject();
-export const orders$ = new Subject();
-export const store$ = new Subject({count: []});
+ const restart$ = new Subject();
+ const orders$ = new Subject();
+ const store$ = new Subject({count: []});
 
 class Button extends React.Component {
 
@@ -43,18 +43,20 @@ class Button extends React.Component {
     this.log.info('shouldComponentUpdate');
     return null;
   }
-*/
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     // If we have a snapshot value, we've just added new items.
     // Adjust scroll so these new items don't push the old ones out of view.
     // (snapshot here is the value returned from getSnapshotBeforeUpdate)
     this.log.info('componentDidUpdate');
   }
-
+*/
   componentDidMount(){
+
     let btn  = ReactDOM.findDOMNode(this.refs.btn);
     this.log.info('componentDidMount btn',btn);
-   // this.obs = Observable.fromEvent(btn, 'click').subscribe(x=> console.log('FFGFGEEV', x));
+    this.obs = fromEvent(btn, 'click').subscribe(x=> console.log('FFGFGEEV', x));
+    this.move = fromEvent(document, 'mousemove').subscribe(x=> console.log('move', x));
 
   }
   handleUpdate = store => {    
@@ -63,9 +65,9 @@ class Button extends React.Component {
     }));
   };
   componentWillUnmount(){
-
     this.log.info('componentWillUnmount');
-    this.obs.unsbscribe();
+    this.obs.complete();
+    this.move.complete();
   }
 
   render ()

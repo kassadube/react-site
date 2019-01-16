@@ -27,3 +27,7 @@ reset last commit
 
  delete remove branch
  - git push origin :feature/hooks
+
+ get last commit stat
+ - git show --stat
+ -git show <commit> --stat

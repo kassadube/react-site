@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Header from '../../components/header';
 import Log from '../../../../constants/log';
 import Button from '../../components/rxComps/button';
 import Timer from '../../components/rxComps/timer';
@@ -53,11 +54,15 @@ class Rxjsmove extends React.Component {
   {
     this.log.info('render');
       return (
-        <div>
+        <div className="PD10">
+          <div className="app-container">
+            <Header headerName="RXJS"/>
           move
-          
+          <Button />
           <Timer />
         </div>
+        </div>
+        
       )
   }
 }
