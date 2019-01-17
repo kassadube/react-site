@@ -4,8 +4,9 @@ import Header from '../../components/header';
 import Log from '../../../../constants/log';
 import Button from '../../components/rxComps/button';
 import Timer from '../../components/rxComps/timer';
+import Dragable from '../../components/rxComps/dragable';
 
-
+import './index.css';
 class Rxjsmove extends React.Component {
 
   constructor(props)
@@ -60,6 +61,7 @@ class Rxjsmove extends React.Component {
           move
           <Button />
           <Timer />
+          <Dragable />
         </div>
         </div>
         

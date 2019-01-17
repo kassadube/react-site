@@ -1,0 +1,8 @@
+#dragable {
+    background-image: url('https://openclipart.org/image/300px/svg_to_png/245506/orange-lineart.png&disposition=attachment');
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    position: absolute;
+    cursor: move;
+  }

@@ -12,6 +12,7 @@ import Ex001 from '../../components/rxComps/ex001';
 import Message from '../../components/rxComps/message';
 
 
+
 const Rxjspg = () =>{
   const [interval, setInterval] = useState(1000);
   const[pause, setPause] = useState(false);

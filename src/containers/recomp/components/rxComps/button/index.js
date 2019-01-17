@@ -56,7 +56,7 @@ class Button extends React.Component {
     let btn  = ReactDOM.findDOMNode(this.refs.btn);
     this.log.info('componentDidMount btn',btn);
     this.obs = fromEvent(btn, 'click').subscribe(x=> console.log('FFGFGEEV', x));
-    this.move = fromEvent(document, 'mousemove').subscribe(x=> console.log('move', x));
+   // this.move = fromEvent(document, 'mousemove').subscribe(x=> console.log('move', x));
 
   }
   handleUpdate = store => {    
@@ -67,7 +67,7 @@ class Button extends React.Component {
   componentWillUnmount(){
     this.log.info('componentWillUnmount');
     this.obs.complete();
-    this.move.complete();
+   // this.move.complete();
   }
 
   render ()
