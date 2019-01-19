@@ -24,7 +24,7 @@ const middlewares = composeEnhancers(
   //applyMiddleware(createLogger()),
   applyMiddleware(thunk),
   applyMiddleware(routerMiddleware(history)),
-  applyMiddleware(...authMiddleware),
+ // applyMiddleware(...authMiddleware),
   applyMiddleware(epicMiddleware),
 );
 
