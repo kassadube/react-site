@@ -60,7 +60,7 @@ const mapStateToProps = state => ({
   
   const mapDispatchToProps = dispatch => ({
       authUser : ()=>{ 
-          dispatch({type: types.AUTH_USER_SUCCESS, payload: { data: tokenSelector() } })
+          dispatch({type: types.AUTH_USER_SUCCESS, payload:   tokenSelector()  })
           dispatch({type: types.AUTH_USER_DEFINITION_REQUEST, payload:  tokenSelector()  })
         }
   }
