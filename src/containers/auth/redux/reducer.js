@@ -21,8 +21,7 @@ const reducer = (state = InitialState, action) => {
                   .set('username', action.payload.username)
                   .set('password', action.payload.password);
 
-    case types.AUTH_USER_SUCCESS:
-        debugger
+    case types.AUTH_USER_SUCCESS:        
         axios.defaults.headers.common.Authorization = `Bearer ${action.payload.token}`;
         localStorage.setItem('token', action.payload.token);
         localStorage.setItem('token-expiration', action.payload.expire);
