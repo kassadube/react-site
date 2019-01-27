@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Header from '../Header';
 import Routes from '../Routes';
 import { getAppLogoSelector, getAccountLogoSelector, getAccountLoginName } from "../../../containers/auth/redux/selectors";
+import SideBar from '../SideBar';
 
 import  './index.css';
 const ContentLayout = (props) =>{
@@ -11,7 +12,14 @@ const ContentLayout = (props) =>{
     return (        
         <div className="app-layout container-fluid">
             <Header appLogo={appLogo} accountLogo={accountLogo} loginName={loginName}/> 
-            <Routes />            
+            <div className='middle-section'>
+                <div className='sidebar-bg'>
+                    <SideBar />
+                </div>
+                <main className='main-panel'>
+                    <Routes /> 
+                </main>                  
+            </div>         
         </div>
     )
 
