@@ -10,6 +10,7 @@ import Hooks from '../../../containers/hooks';
 import Auth from '../../../containers/auth';
 import Recomp from '../../../containers/recomp';
 import Fleet from '../../../containers/fleet';
+import Messages from '../../../containers/messages';
 import Test from '../../../containers/test';
 
 const Cntr = Counter.components.Main;
@@ -41,6 +42,7 @@ const Routes = ()=>{
       <Route path="/pingpong" component={Pingpong} />
       <Route path="/login" component={Login} />
       <Route path="/fleet" component={Fleet.pages.Main} />
+      <Route path="/messages" component={Messages.pages.Main} />
       <Route path="/test" component={Test.pages.Main} />
       <Route path="/signOut" component={SignOut} />
       <Route component={NoMatch} />
