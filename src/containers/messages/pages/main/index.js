@@ -5,6 +5,21 @@ import { connect } from 'react-redux';
 
 import { columns_ACTION } from '../../redux/actions';
 import {columnsSelector } from '../../redux/selectors';
+import Table from '../../components/table/Table';
+
+const columns = [
+    {
+      text: 'aaaa',
+    },
+    {
+        text: 'bbbb',
+    },
+    {
+        text: 'cccc',
+    }  
+];
+
+
 class Main extends Component {
     
     constructor(props)
@@ -20,7 +35,10 @@ class Main extends Component {
     }*/
     render(){
         return (
-            <div>messages</div>
+            <div>messages
+
+                <Table columns={columns}/>
+            </div>
         )
     }
 }
