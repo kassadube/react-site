@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Cell = () => {
+const Cell = ({content}) => {
 
     return (
-        <div>cell</div>
+        <div>{content}</div>
     );
 }
 export default Cell;

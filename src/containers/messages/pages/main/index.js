@@ -5,17 +5,26 @@ import { connect } from 'react-redux';
 
 import { columns_ACTION } from '../../redux/actions';
 import {columnsSelector } from '../../redux/selectors';
-import Table from '../../components/table/Table';
+import MTable from '../../components/mTable';
+ 
+import data from '../../data';
 
 const columns = [
     {
-      text: 'aaaa',
+        property: 'id',
+        text: 'ID',
     },
     {
-        text: 'bbbb',
+        property: 'postId',
+        text: 'POST ID',
     },
     {
-        text: 'cccc',
+        property: 'name',
+        text: 'NAME',
+    } ,
+    {
+        property: 'email',
+        text: 'EMAIL',
     }  
 ];
 
@@ -35,9 +44,11 @@ class Main extends Component {
     }*/
     render(){
         return (
-            <div>messages
-
-                <Table columns={columns}/>
+            <div >
+                <MTable 
+                    data={data}
+                    columns={columns}
+                />
             </div>
         )
     }

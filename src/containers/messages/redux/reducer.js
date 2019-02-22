@@ -1,8 +1,19 @@
-import Immutable from 'immutable';
-//import { NAME } from './constants';
+import Immutable, { Map, fromJS, List } from 'immutable';
+
 import * as types from './actionTypes';
 
-const initialState = Immutable.Map({ val: 0, isPinging: 0, 'columns_request': 0, 'columns_request_test': 0, 'columns_request_test2': 0});
+const initialState = Immutable.Map({
+    val: 0, 
+    isPinging: 0,
+    'columns_request': 0, 
+    'columns_request_test': 0, 
+    'columns_request_test2': 0,
+    // events
+    isFetching: false,
+    eventsTableRecords: List([]),
+    eventsTableSelectedRowItem: null,
+    eventsMaxEventId: 0,
+    });
 
 const reducer = (state = initialState, action) => {
     

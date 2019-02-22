@@ -6,7 +6,7 @@ const RowHeader = ({columns}) => {
     return (
         <div className="grid-row">
             {
-                columns.map(x=> <div>{x.text}</div> )
+                columns.map((x, i)=> <div key={'H' + i}>{x.text}</div> )
             }
         </div>
     );
