@@ -4,9 +4,9 @@ import RowHeader from './RowHeader';
 
 import './index.css';
 
-const Table = ({columns, data}) => {
+const Table = ({columns, data, onclick}) => {
 
-    return (<div className="grid-containera">
+    return (<div className="grid-containera" >
             <RowHeader columns={columns} />
             <div style={{height:'500px', overflowY:'scroll'}}>
                 {
