@@ -1,0 +1,11 @@
+.message-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-gap: 5px;
+    background-color: rgb(55, 74, 90); 
+    .row-content {
+        grid-column-start:1;
+        grid-column-end:4;
+    }
+}

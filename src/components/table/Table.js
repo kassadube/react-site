@@ -6,9 +6,9 @@ import './index.css';
 
 const Table = ({columns, data, onclick}) => {
 
-    return (<div className="grid-containera" >
+    return (<div className="grid-container" >
             <RowHeader columns={columns} />
-            <div style={{height:'500px', overflowY:'scroll'}}>
+            <div style={{height:'320px', overflowY:'scroll'}}>
                 {
                     data.map((x,i) => <Row key={i} columns={columns} data={x}/>)
                 }

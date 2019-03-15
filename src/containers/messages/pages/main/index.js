@@ -6,6 +6,9 @@ import { connect } from 'react-redux';
 import { columns_ACTION } from '../../redux/actions';
 import {columnsSelector } from '../../redux/selectors';
 import MTable from '../../components/mTable';
+import Log from  '../../../../constants/log';
+
+import './index.scss';
  
 import data from '../../data';
 
@@ -33,7 +36,9 @@ class Main extends Component {
     
     constructor(props)
     {
-        super(props);        
+        super(props);   
+        this.log = Log('messages:main'); 
+        this.log.info('constructor',props);       
         if(props.columns == null)
             props.getColumns();
     }
@@ -43,12 +48,21 @@ class Main extends Component {
         
     }*/
     render(){
+        this.log.info('render',this.props);   
         return (
-            <div >
-                <MTable 
-                    data={data}
-                    columns={columns}
-                />
+            <div className='message-grid'>
+                <div>row1
+                </div>
+                <div>row2
+                </div>
+                <div>row3
+                </div>
+                <div className='row-content'>                
+                    <MTable 
+                        data={data}
+                        columns={columns}/>
+                </div>
+                
             </div>
         )
     }

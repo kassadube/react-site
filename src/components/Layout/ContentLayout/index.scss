@@ -1,0 +1,23 @@
+div.app-layout {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px auto 20px;
+    grid-template-rows: 50px auto 20px;
+    header {
+        grid-column-start:1;
+        grid-column-end:4;
+    }
+    .side-menu{
+        background: green;
+    }
+    .footer {
+        grid-column-start:1;
+        grid-column-end:4;
+        background: black;
+
+    }
+}
+

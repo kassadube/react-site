@@ -34,4 +34,5 @@ const store = createStore(
   middlewares,
 )
 epicMiddleware.run(epics);
+window.store = store;
 export default store;

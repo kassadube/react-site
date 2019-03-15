@@ -16,6 +16,7 @@
     "jest-dom": "^2.1.1",
     "jest-enzyme": "^7.0.1",
     "logrocket": "^0.6.17",
+    "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-icons": "^3.4.0",
