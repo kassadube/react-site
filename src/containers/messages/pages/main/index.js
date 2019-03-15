@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { columns_ACTION } from '../../redux/actions';
-import {columnsSelector } from '../../redux/selectors';
+import { columns_ACTION, fetchMessagesAction } from '../../redux/actions';
+import {columnsSelector, eventsSelector } from '../../redux/selectors';
 import MTable from '../../components/mTable';
 import Log from  '../../../../constants/log';
 
@@ -38,11 +38,15 @@ class Main extends Component {
     {
         super(props);   
         this.log = Log('messages:main'); 
-        this.log.info('constructor',props);       
+        this.log.info('constructor',props);  
+        this.getMessages = this.getMessages.bind(this);     
         if(props.columns == null)
             props.getColumns();
     }
 
+    getMessages(){
+        this.props.fetchMessages({quickFilterId: 1, maxId: 0});;
+    }
  /*   static getDerivedStateFromProps(props, state)
     {
         
@@ -51,7 +55,8 @@ class Main extends Component {
         this.log.info('render',this.props);   
         return (
             <div className='message-grid'>
-                <div>row1
+                <div>
+                    <button onClick={this.getMessages} >ddd</button>
                 </div>
                 <div>row2
                 </div>
@@ -68,12 +73,14 @@ class Main extends Component {
     }
 }
 const mapStateToProps = state => ({
-    columns: columnsSelector(state)
+    columns: columnsSelector(state),
+    events: eventsSelector(state),
   })
   
   const mapDispatchToProps = dispatch => (
     bindActionCreators({
-        getColumns: columns_ACTION
+        getColumns: columns_ACTION,
+        fetchMessages: fetchMessagesAction,
     }, dispatch)
   )
   
