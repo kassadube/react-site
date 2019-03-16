@@ -13,6 +13,9 @@ div.app-layout {
     .side-menu{
         background: green;
     }
+    .main-content {
+        background: red;
+    }
     .footer {
         grid-column-start:1;
         grid-column-end:4;

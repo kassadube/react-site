@@ -7,6 +7,8 @@ import { columns_ACTION, fetchMessagesAction } from '../../redux/actions';
 import {columnsSelector, eventsSelector } from '../../redux/selectors';
 import MTable from '../../components/mTable';
 import Log from  '../../../../constants/log';
+import Tabs from '../../../../components/tabs/Tabs';
+import TabTest1 from '../../../../components/tabs/tabTest1';
 
 import './index.scss';
  
@@ -103,7 +105,18 @@ class Main extends Component {
                     <MTable 
                         data={events}
                         columns={columns}/>
-                        : <div>sss</div>
+                        : <Tabs>
+                                <div label="Gator" selected>
+                                See ya later, <em>Alligator</em>!
+                                </div>
+                                <div label="Croc">
+                                After 'while, <em>Crocodile</em>!
+                                </div>
+                                <div label="Sarcosuchus">
+                                Nothing to see here, this tab is <em>extinct</em>!
+                                <TabTest1 />
+                                </div>
+                            </Tabs>
                 }
                 </div>
                 
