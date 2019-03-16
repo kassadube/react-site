@@ -8,8 +8,13 @@
 
   .grid-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr 20px;
+    grid-template-columns: 60px 40px 1fr 1fr 1fr 1fr 1fr 1fr 20px;
     grid-template-rows: 30px;
     grid-gap: 5px;
-    background-color: #2196F3;    
+    background-color: #2196F3; 
+    div {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }   
   }

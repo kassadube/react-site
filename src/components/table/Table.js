@@ -2,7 +2,7 @@ import React from 'react';
 import Row from './Row';
 import RowHeader from './RowHeader';
 
-import './index.css';
+import './index.scss';
 
 const Table = ({columns, data, onclick}) => {
 

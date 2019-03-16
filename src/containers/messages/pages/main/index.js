@@ -11,7 +11,7 @@ import Log from  '../../../../constants/log';
 import './index.scss';
  
 import data from '../../data';
-
+/*
 const columns = [
     {
         property: 'id',
@@ -30,7 +30,41 @@ const columns = [
         text: 'EMAIL',
     }  
 ];
-
+*/
+const columns = [
+    {
+        property: 'id',
+        text: 'ID',
+    },
+    {
+        property: 'severity',
+        text: 'Severity',
+    },
+    {
+        property: 'dateTime',
+        text: 'Date & Time',
+    },
+    {
+        property: 'licensePlate',
+        text: 'Resource',
+    },
+    {
+        property: 'vehicleGroup',
+        text: 'Group',
+    },
+    {
+        property: 'driver',
+        text: 'Driver',
+    },
+    {
+        property: 'eventType',
+        text: 'Type',
+    },
+    {
+        property: 'eventName',
+        text: 'Name',
+    },    
+];
 
 class Main extends Component {
     
@@ -45,14 +79,15 @@ class Main extends Component {
     }
 
     getMessages(){
-        this.props.fetchMessages({quickFilterId: 1, maxId: 0});;
+        this.props.fetchMessages({quickFilterId: 2, maxId: 0});;
     }
  /*   static getDerivedStateFromProps(props, state)
     {
         
     }*/
     render(){
-        this.log.info('render',this.props);   
+        const {events} = this.props;
+        this.log.info('render',events.count()); 
         return (
             <div className='message-grid'>
                 <div>
@@ -62,10 +97,14 @@ class Main extends Component {
                 </div>
                 <div>row3
                 </div>
-                <div className='row-content'>                
+                <div className='row-content'>  
+                {   
+                    events.count() > 0 ?           
                     <MTable 
-                        data={data}
+                        data={events}
                         columns={columns}/>
+                        : <div>sss</div>
+                }
                 </div>
                 
             </div>
