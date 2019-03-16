@@ -13,13 +13,12 @@ body {
   overflow-y: hidden; 
 color: white}
 
-  div#root, div.context-provider, div.app-layout.container-fluid {
+  div#root, div.context-provider {
     width: inherit;
     height: inherit;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; }
+    }
 
     h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
@@ -30,3 +29,7 @@ color: white}
 padding:10px;
 
     }
+ul{ 
+      list-style: none;
+  }
+  
