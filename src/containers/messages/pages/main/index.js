@@ -8,6 +8,7 @@ import {columnsSelector, eventsSelector } from '../../redux/selectors';
 import MTable from '../../components/mTable';
 import Log from  '../../../../constants/log';
 import Tabs from '../../../../components/tabs/Tabs';
+import TabHeader from '../../../../components/tabs/TabHeader';
 import TabTest1 from '../../../../components/tabs/tabTest1';
 
 import './index.scss';
@@ -106,13 +107,22 @@ class Main extends Component {
                         data={events}
                         columns={columns}/>
                         : <Tabs>
-                                <div label="Gator" selected>
+                                <TabHeader label="Gator1">
+                                    <div>dfdd</div>
+                                </TabHeader>
+                                <TabHeader label="Croc1">
+                                    <div>dfdd</div>
+                                </TabHeader>
+                                <TabHeader label="Sarcosuchus1">
+                                    <div>dfdd</div>
+                                </TabHeader>
+                                <div>
                                 See ya later, <em>Alligator</em>!
                                 </div>
-                                <div label="Croc">
+                                <div>
                                 After 'while, <em>Crocodile</em>!
                                 </div>
-                                <div label="Sarcosuchus">
+                                <div>
                                 Nothing to see here, this tab is <em>extinct</em>!
                                 <TabTest1 />
                                 </div>

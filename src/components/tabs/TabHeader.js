@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Tab extends Component {
+class TabHeader extends Component {
   static propTypes = {
     activeTab: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
@@ -39,4 +39,4 @@ class Tab extends Component {
   }
 }
 
-export default Tab;
+export default TabHeader;

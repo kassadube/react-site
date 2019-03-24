@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import Tab from './Tab';
+import TabHeader from './TabHeader';
 import Log from  '../../constants/log';
 
 import './index.scss';
@@ -22,6 +22,17 @@ class Tabs extends Component {
         this.setState({ activeTab: tab });
     }
 
+    renderTabHeader () {
+      const headers = this.props.children.filter(x => typeof(x.type) === "function");
+      <ol className="tab-list">
+          {headers.map((child) => {
+            const { label } = child.props;
+            console.log(typeof(child.type));
+            return child;
+          })}
+        </ol>
+    }
+
     render (){
         const {
             onClickTabItem,
@@ -34,23 +45,11 @@ class Tabs extends Component {
           } = this;
         return (
             <div className="tabs">
-        <ol className="tab-list">
-          {children.map((child) => {
-            const { label } = child.props;
-            return (
-              <Tab
-                activeTab={activeTab}
-                key={label}
-                label={label}
-                onClick={onClickTabItem}
-              />
-            );
-          })}
-        </ol>
+        {renderTabHeader ()}
         <div className="tab-content">
           {children.map((child) => {
             if (child.props.label !== activeTab) return undefined;
-            return child.props.children;
+            return child;
           })}
         </div>
       </div>
