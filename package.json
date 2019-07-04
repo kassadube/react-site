@@ -3,13 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "2.1.2",
-    "@storybook/react": "^5.0.5",
-    "@storybook/addon-actions": "^5.0.5",
-    "@storybook/addon-links": "^5.0.5",
-    "@storybook/addons": "^5.0.5",
-    "@babel/core": "^7.4.0",
-    "babel-loader": "^8.0.5"
+    "react-scripts": "3.0.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -24,8 +18,8 @@
     "jest-enzyme": "^7.0.1",
     "logrocket": "^0.6.17",
     "node-sass": "^4.11.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-icons": "^3.4.0",
     "react-redux": "6.0.0",
     "react-router": "^4.3.1",

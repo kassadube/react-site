@@ -24,13 +24,13 @@ class Tabs extends Component {
 
     renderTabHeader () {
       const headers = this.props.children.filter(x => typeof(x.type) === "function");
-      <ol className="tab-list">
+     /* <ol className="tab-list">
           {headers.map((child) => {
             const { label } = child.props;
             console.log(typeof(child.type));
             return child;
           })}
-        </ol>
+        </ol>*/
     }
 
     render (){
