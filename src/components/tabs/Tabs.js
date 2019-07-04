@@ -22,16 +22,7 @@ class Tabs extends Component {
         this.setState({ activeTab: tab });
     }
 
-    renderTabHeader () {
-      const headers = this.props.children.filter(x => typeof(x.type) === "function");
-     /* <ol className="tab-list">
-          {headers.map((child) => {
-            const { label } = child.props;
-            console.log(typeof(child.type));
-            return child;
-          })}
-        </ol>*/
-    }
+    
 
     render (){
         const {
@@ -45,7 +36,7 @@ class Tabs extends Component {
           } = this;
         return (
             <div className="tabs">
-        {renderTabHeader ()}
+       
         <div className="tab-content">
           {children.map((child) => {
             if (child.props.label !== activeTab) return undefined;
