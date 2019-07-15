@@ -1,6 +1,10 @@
 import React from 'react';
+import axios from 'axios';
+import usePromise from '@kassadube/hook-toolkit';
 import Header from '../../components/header';
 import Counter from '../../components/counter';
+import {SimpleMenu} from 'rtttr-first-test';
+
 
 class Main extends React.Component {
     
@@ -9,10 +13,21 @@ class Main extends React.Component {
         
         return (
             <div className="app-container">
-                <Header headerName="Main"/> 
+                <Header headerName="Main"/> ss
+                <UserPromise/>
+                <SimpleMenu></SimpleMenu>
                 <Counter />               
             </div>
         );
     }
 }
+const fetchUser = () =>
+  axios.get("https://randomuser.me/api/").then(({ data }) => data.results[0]);
+
+const UserPromise = () => {
+  const { data, isLoading } = usePromise(fetchUser, { resolve: true });
+
+  return isLoading ? "Loading..." : <img src={data.picture.medium} />;
+}
+
 export default Main;
