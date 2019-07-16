@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const SideMenu = () => (      
-      <ul>        
-        <li><Link to="/fleet">F</Link></li>
-        <li><Link to="/messages">M</Link></li>
-      </ul>  
+import SideMiniMenu from '../../side-menu';
+const sMenu = [
+  ['/fleet','F'],
+  ['/messages','M'],
+  ['/hook','H'],
+  ['/recomp','R'],
+  ['/recomp','R'],
+]
+const SideMenu = () => ( 
+  <SideMiniMenu items={sMenu} />
 );
 
 export default SideMenu;

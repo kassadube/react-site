@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import usePromise from '@kassadube/hook-toolkit';
-import Header from '../../components/header';
+import MiniHeader from '../../../../components/miniHeader';
 import Counter from '../../components/counter';
 import {SimpleMenu} from 'rtttr-first-test';
 
@@ -13,9 +13,8 @@ class Main extends React.Component {
         
         return (
             <div className="app-container">
-                <Header headerName="Main"/> ss
-                <UserPromise/>
-                <SimpleMenu></SimpleMenu>
+                <MiniHeader headerName="Main"/> ss
+                <UserPromise/>                
                 <Counter />               
             </div>
         );

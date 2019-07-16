@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 import './index.scss';
+import SideMenu from '../../../../components/side-menu';
 
 const Header = ({headerName, showMenu = true}) => {
     
@@ -10,7 +11,7 @@ const Header = ({headerName, showMenu = true}) => {
         <div>
             {showMenu}
             <div className="header-container container">
-                <h1>Hooks {headerName}</h1>
+                <h1>Hooks {headerName}</h1>                
                 {                    
                      showMenu ?(<ul>
                         <li>
