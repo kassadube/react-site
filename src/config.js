@@ -34,6 +34,8 @@ const getMockFullUrlPath = (relativePath) => CURRENT_URL_PROTOCOL_TYPE + MOCK_UR
 const config = { // eslint-disable-line no-unused-vars
     LOGIN_ERROR_MESSAGE: 'txtLoginError',
     FLEET: { version: '4.6.5'},
+    NASA_KEY: 'bmzbSNwSlB3lUlJ6mweZJty6v82YP2M9R9kgd0ib',
+    API:'O_7AVgoT5l-L-sYNX8rb',
     IDLE_TIMEOUT: 900000, // 900000 ms = 15 minutes
     URL: {
         BASE: '',

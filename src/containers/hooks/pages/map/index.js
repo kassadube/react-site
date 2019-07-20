@@ -7,7 +7,7 @@ import {SimpleMenu} from 'rtttr-first-test';
 
 import {menuItems} from'../../constants';
 
-const ModalTestPage = () => {
+const MapTestPage = () => {
     const [modal, setModal] = useState(0);
     const project = modal > 0;
     console.log(modal);
@@ -30,4 +30,6 @@ const ModalTestPage = () => {
 }
 
 
-export default ModalTestPage;
+export default MapTestPage;
+
+// https://janosh.io/page-data/nature/page-data.json

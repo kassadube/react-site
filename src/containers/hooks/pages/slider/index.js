@@ -2,7 +2,7 @@ import React from 'react';
 import MiniHeader from '../../../../components/miniHeader';
 import RangeSlider from '../../components/slider';
 
-import menuItems from'../../constants';
+import {menuItems} from'../../constants';
 
 class Slider extends React.Component {
     

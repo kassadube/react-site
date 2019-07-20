@@ -30,7 +30,9 @@ const Routes = ()=>{
       <Route path="/counter" component={Cntr} />
       <Route exact path="/hook" component={Hooks.pages.Main} />
       <Route path="/hook/slider" component={Hooks.pages.Slider} />  
-      <Route path="/hook/Modal" component={Hooks.pages.Modal} /> 
+      <Route path="/hook/Modal" component={Hooks.pages.ModalTestPage} /> 
+      <Route path="/hook/Map" component={Hooks.pages.MapTestPage} /> 
+      <Route path="/hook/photos" component={Hooks.pages.Photos} /> 
       <Route exact path="/recomp" component={Recomp.Page.CardShow} />   
       <Route exact path="/recomp/plain" component={Recomp.Page.Plain} />  
       <Route exact path="/recomp/resite" component={Recomp.Page.Resite} /> 
