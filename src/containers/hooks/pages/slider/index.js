@@ -1,6 +1,8 @@
 import React from 'react';
-import Header from '../../components/header';
+import MiniHeader from '../../../../components/miniHeader';
 import RangeSlider from '../../components/slider';
+
+import menuItems from'../../constants';
 
 class Slider extends React.Component {
     
@@ -13,7 +15,7 @@ class Slider extends React.Component {
         
         return (
             <div className="app-container">
-                <Header headerName="slider"/> 
+                <MiniHeader headerName="Slider" items={menuItems}/>
                 <div className="PD10">
                   <br/>33
                   <RangeSlider.RangeSlider />33

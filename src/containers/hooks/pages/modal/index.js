@@ -7,10 +7,11 @@ import {SimpleMenu} from 'rtttr-first-test';
 
 import menuItems from'../../constants';
 
-class Main extends React.Component {
+class Modal extends React.Component {
     
     
     render(){
+        
         return (
             <div className="app-container">
                 <MiniHeader headerName="Main Hooks" items={menuItems}/> ss
@@ -29,4 +30,4 @@ const UserPromise = () => {
   return isLoading ? "Loading..." : <img src={data.picture.medium} />;
 }
 
-export default Main;
+export default Modal;
