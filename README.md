@@ -31,3 +31,17 @@ reset last commit
  get last commit stat
  - git show --stat
  -git show <commit> --stat
+
+ add ips
+
+ const URL_RESOURCE_NAME = {
+    LOCAL: 'localhost:51819/',
+    TEST: `${API_IP.POINTER}/fleet.core.api/`,
+    DEV: `${API_IP.DEVALORE}/fleet.core.api/`,
+    DEV2: 'ptl-dev-web01.pointerbi.com/fleetcore.api/',
+    QA: 'pointerqa-web02.pointerbi.com/fleetcore.api/',
+    QA2: '62.0.95.30/fleetcore.api/',
+    PROD: `${API_IP.POINTER}/fleet.core.api/`,
+    MOCK: `${API_IP.MOCK}/`,
+    STAGING: 'webqa-staging01.pointerbi.com/fleetcore.api/'
+};
