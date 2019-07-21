@@ -3,7 +3,6 @@ import axios from 'axios';
 import usePromise from '@kassadube/hook-toolkit';
 import MiniHeader from '../../../../components/miniHeader';
 import Counter from '../../components/counter';
-import {SimpleMenu} from 'rtttr-first-test';
 
 import menuItems from'../../constants';
 
