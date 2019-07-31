@@ -6,7 +6,7 @@ const sMenu = [
   ['/messages','M'],
   ['/hook','H'],
   ['/recomp','R'],
-  ['/recomp','R'],
+  ['/hook/tableTest','T'],
 ]
 const SideMenu = () => ( 
   <SideMiniMenu items={sMenu} />
